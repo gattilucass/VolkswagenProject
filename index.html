@@ -12,7 +12,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Feather Icons -->
     <script src="https://unpkg.com/feather-icons"></script>
@@ -26,16 +26,16 @@
             theme: {
                 extend: {
                     colors: {
-                        'cyber-dark': '#0D0D0D',
-                        'cyber-primary': '#5C4DFF',
-                        'cyber-secondary': '#A863F3',
-                        'cyber-accent': '#F5C169',
-                        'cyber-text': '#EAEAEA',
-                        'cyber-text-secondary': '#A1A1A1'
+                        'cyber-dark': '#111827',
+                        'cyber-primary': '#6366F1',
+                        'cyber-secondary': '#818CF8',
+                        'cyber-accent': '#F59E0B',
+                        'cyber-text': '#F9FAFB',
+                        'cyber-text-secondary': '#D1D5DB'
                     },
                     fontFamily: {
                         'orbitron': ['Orbitron', 'monospace'],
-                        'inter': ['Inter', 'sans-serif']
+                        'montserrat': ['Montserrat', 'sans-serif']
                     },
                     animation: {
                         'float': 'float 6s ease-in-out infinite',
@@ -48,7 +48,7 @@
         }
     </script>
 </head>
-<body class="bg-cyber-dark text-cyber-text font-inter overflow-x-hidden">
+<body class="bg-cyber-dark text-cyber-text font-montserrat overflow-x-hidden">
     
     <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50 bg-cyber-dark/80 backdrop-blur-md border-b border-cyber-primary/20">
@@ -93,27 +93,31 @@
         <div class="relative z-10 text-center px-6">
             <!-- VW Logo Animation -->
             <div class="mb-8 animate-fade-in">
-                <div class="vw-logo mx-auto mb-6 w-24 h-24 border-2 border-cyber-primary rounded-full flex items-center justify-center animate-glow">
-                    <span class="font-orbitron font-bold text-2xl text-cyber-primary">VW</span>
+                <div class="vw-logo mx-auto mb-6 w-32 h-32 flex items-center justify-center animate-glow">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Volkswagen_logo_2019.svg/1024px-Volkswagen_logo_2019.svg.png" 
+                         alt="Volkswagen Logo" 
+                         class="w-20 h-20 filter brightness-0 invert">
                 </div>
             </div>
             
             <!-- Main Headline -->
-            <h1 class="font-orbitron font-bold text-4xl md:text-7xl lg:text-8xl mb-6 animate-slide-in">
+            <h1 class="font-orbitron font-bold text-4xl md:text-7xl lg:text-8xl mb-6 animate-slide-in text-center">
                 <span class="text-cyber-primary">LA NUEVA</span><br>
                 <span class="text-cyber-accent">ERA ELÉCTRICA</span>
             </h1>
             
             <!-- Tagline -->
-            <p class="font-orbitron text-xl md:text-2xl text-cyber-text-secondary mb-8 animate-fade-in" style="animation-delay: 0.5s;">
+            <p class="font-orbitron text-xl md:text-2xl text-cyber-text-secondary mb-8 animate-fade-in text-center" style="animation-delay: 0.5s;">
                 Feel the Shift.
             </p>
             
             <!-- CTA Button -->
-            <button class="cta-button group relative px-8 py-4 font-inter font-semibold text-lg border-2 border-cyber-primary text-cyber-primary rounded-full hover:bg-cyber-primary hover:text-cyber-dark transition-all duration-300 animate-fade-in" style="animation-delay: 1s;" onclick="scrollToSection('concept')">
-                <span class="relative z-10">Iniciar Recorrido</span>
-                <div class="absolute inset-0 rounded-full bg-cyber-primary scale-0 group-hover:scale-100 transition-transform duration-300"></div>
-            </button>
+            <div class="flex justify-center animate-fade-in" style="animation-delay: 1s;">
+                <button class="cta-button group relative px-8 py-4 font-montserrat font-semibold text-lg border-2 border-cyber-primary text-cyber-primary rounded-full hover:bg-cyber-primary hover:text-white transition-all duration-300" onclick="scrollToSection('concept')">
+                    <span class="relative z-10">Iniciar Recorrido</span>
+                    <div class="absolute inset-0 rounded-full bg-cyber-primary scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+                </button>
+            </div>
         </div>
         
         <!-- Scroll Indicator -->
@@ -171,16 +175,16 @@
                 <!-- Naming & Creative Strategy -->
                 <div class="project-card group fade-in-on-scroll">
                     <div class="icon-container">
-                        <i data-feather="lightbulb" class="w-12 h-12 text-cyber-accent"></i>
+                        <i data-feather="edit-3" class="w-12 h-12 text-cyber-accent"></i>
                     </div>
-                    <h3 class="font-orbitron font-semibold text-xl mb-4 text-cyber-primary">
+                    <h3 class="font-orbitron font-semibold text-xl mb-4 text-cyber-text">
                         Naming & Estrategia Creativa
                     </h3>
                     <p class="text-cyber-text-secondary mb-6 leading-relaxed">
                         Desarrollo de identidad verbal y estrategia creativa basada en insights emocionales 
                         y tendencias tecnológicas, creando una narrativa coherente y disruptiva.
                     </p>
-                    <button class="cyber-button-sm" onclick="scrollToSection('naming-details')">
+                    <button class="cyber-button-sm" onclick="scrollToSection('brand-strategy')">
                         Ver Detalles
                         <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
                     </button>
@@ -191,7 +195,7 @@
                     <div class="icon-container">
                         <i data-feather="image" class="w-12 h-12 text-cyber-accent"></i>
                     </div>
-                    <h3 class="font-orbitron font-semibold text-xl mb-4 text-cyber-primary">
+                    <h3 class="font-orbitron font-semibold text-xl mb-4 text-cyber-text">
                         Storytelling Visual
                     </h3>
                     <p class="text-cyber-text-secondary mb-6 leading-relaxed">
@@ -209,7 +213,7 @@
                     <div class="icon-container">
                         <i data-feather="monitor" class="w-12 h-12 text-cyber-accent"></i>
                     </div>
-                    <h3 class="font-orbitron font-semibold text-xl mb-4 text-cyber-primary">
+                    <h3 class="font-orbitron font-semibold text-xl mb-4 text-cyber-text">
                         Experiencia Interactiva Web
                     </h3>
                     <p class="text-cyber-text-secondary mb-6 leading-relaxed">
@@ -220,6 +224,119 @@
                         Ver Detalles
                         <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
                     </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Strategy Section -->
+    <section id="brand-strategy" class="py-20 bg-gradient-to-b from-cyber-primary/5 to-transparent">
+        <div class="container mx-auto px-6">
+            <h2 class="font-orbitron font-bold text-4xl md:text-5xl text-center mb-16 text-cyber-primary fade-in-on-scroll">
+                Naming & Estrategia Creativa
+            </h2>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Brand Identity -->
+                <div class="fade-in-on-scroll">
+                    <h3 class="font-orbitron font-semibold text-3xl mb-8 text-cyber-accent">Identidad de Marca</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="bg-gray-800/40 p-6 rounded-xl border border-gray-600/40">
+                            <h4 class="font-orbitron font-medium text-xl mb-4 text-cyber-text">Concepto Principal</h4>
+                            <div class="text-center p-8 bg-gradient-to-br from-cyber-primary/10 to-cyber-secondary/10 rounded-lg border border-cyber-primary/30">
+                                <p class="font-orbitron text-3xl font-bold text-cyber-primary mb-2">"LA NUEVA ERA ELÉCTRICA"</p>
+                                <p class="font-orbitron text-xl text-cyber-accent">Feel the Shift.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gray-800/40 p-6 rounded-xl border border-gray-600/40">
+                            <h4 class="font-orbitron font-medium text-xl mb-4 text-cyber-text">Paleta de Colores</h4>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="text-center p-4 bg-cyber-primary rounded-lg">
+                                    <p class="text-white font-medium">#6366F1</p>
+                                    <p class="text-white/80 text-sm">Primary</p>
+                                </div>
+                                <div class="text-center p-4 bg-cyber-secondary rounded-lg">
+                                    <p class="text-white font-medium">#818CF8</p>
+                                    <p class="text-white/80 text-sm">Secondary</p>
+                                </div>
+                                <div class="text-center p-4 bg-cyber-accent rounded-lg">
+                                    <p class="text-cyber-dark font-medium">#F59E0B</p>
+                                    <p class="text-cyber-dark/80 text-sm">Accent</p>
+                                </div>
+                                <div class="text-center p-4 bg-gray-800 rounded-lg border border-gray-600">
+                                    <p class="text-cyber-text font-medium">#111827</p>
+                                    <p class="text-cyber-text-secondary text-sm">Dark Base</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Typography & Design Elements -->
+                <div class="fade-in-on-scroll">
+                    <h3 class="font-orbitron font-semibold text-3xl mb-8 text-cyber-accent">Elementos de Diseño</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="bg-gray-800/40 p-6 rounded-xl border border-gray-600/40">
+                            <h4 class="font-orbitron font-medium text-xl mb-4 text-cyber-text">Tipografía</h4>
+                            <div class="space-y-4">
+                                <div class="p-4 bg-cyber-dark rounded-lg">
+                                    <p class="font-orbitron text-2xl text-cyber-primary mb-2">Orbitron</p>
+                                    <p class="text-cyber-text-secondary text-sm">Títulos y elementos destacados - Tecnológico y futurista</p>
+                                </div>
+                                <div class="p-4 bg-cyber-dark rounded-lg">
+                                    <p class="font-montserrat text-xl text-cyber-text mb-2">Montserrat</p>
+                                    <p class="text-cyber-text-secondary text-sm">Texto principal - Legible y profesional</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gray-800/40 p-6 rounded-xl border border-gray-600/40">
+                            <h4 class="font-orbitron font-medium text-xl mb-4 text-cyber-text">Estética Cyber-Organic</h4>
+                            <ul class="space-y-3 text-cyber-text-secondary">
+                                <li class="flex items-start space-x-3">
+                                    <i data-feather="zap" class="w-5 h-5 text-cyber-accent mt-0.5 flex-shrink-0"></i>
+                                    <span>Fusión de elementos tecnológicos con formas orgánicas</span>
+                                </li>
+                                <li class="flex items-start space-x-3">
+                                    <i data-feather="layers" class="w-5 h-5 text-cyber-accent mt-0.5 flex-shrink-0"></i>
+                                    <span>Gradientes que evocan transformación energética</span>
+                                </li>
+                                <li class="flex items-start space-x-3">
+                                    <i data-feather="aperture" class="w-5 h-5 text-cyber-accent mt-0.5 flex-shrink-0"></i>
+                                    <span>Animaciones fluidas que reflejan movimiento eléctrico</span>
+                                </li>
+                                <li class="flex items-start space-x-3">
+                                    <i data-feather="grid" class="w-5 h-5 text-cyber-accent mt-0.5 flex-shrink-0"></i>
+                                    <span>Geometrías precisas con bordes suavizados</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Strategic Pillars -->
+            <div class="mt-16 fade-in-on-scroll">
+                <h3 class="font-orbitron font-semibold text-3xl mb-8 text-center text-cyber-accent">Pilares Estratégicos</h3>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center p-8 bg-gray-800/40 rounded-xl border border-gray-600/40">
+                        <i data-feather="trending-up" class="w-12 h-12 text-cyber-primary mx-auto mb-4"></i>
+                        <h4 class="font-orbitron font-medium text-xl mb-3 text-cyber-text">Innovación</h4>
+                        <p class="text-cyber-text-secondary">Tecnología de vanguardia que redefine la experiencia de conducción</p>
+                    </div>
+                    <div class="text-center p-8 bg-gray-800/40 rounded-xl border border-gray-600/40">
+                        <i data-feather="heart" class="w-12 h-12 text-cyber-secondary mx-auto mb-4"></i>
+                        <h4 class="font-orbitron font-medium text-xl mb-3 text-cyber-text">Emoción</h4>
+                        <p class="text-cyber-text-secondary">Conexión emocional profunda con el futuro sostenible</p>
+                    </div>
+                    <div class="text-center p-8 bg-gray-800/40 rounded-xl border border-gray-600/40">
+                        <i data-feather="globe" class="w-12 h-12 text-cyber-accent mx-auto mb-4"></i>
+                        <h4 class="font-orbitron font-medium text-xl mb-3 text-cyber-text">Transformación</h4>
+                        <p class="text-cyber-text-secondary">Cambio hacia un mundo más limpio y eficiente</p>
+                    </div>
                 </div>
             </div>
         </div>

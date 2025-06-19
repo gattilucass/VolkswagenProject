@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campaña VW ID.4 – "La Nueva Era Eléctrica"</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #111827;
+            color: #E5E7EB;
+        }
+        .page {
+            width: 100%;
+            min-height: 100vh;
+            padding: 4rem 2rem;
+            border-bottom: 1px solid #374151;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .page:last-child {
+            border-bottom: none;
+        }
+        .page-cover {
+            background: linear-gradient(135deg, #0d122b 0%, #1f2937 50%, #3a2d5b 100%);
+        }
+        .page h1 {
+            font-weight: 900;
+            font-size: 3.5rem;
+            line-height: 1.1;
+            text-transform: uppercase;
+            letter-spacing: -0.05em;
+            text-align: center;
+            color: #FFFFFF;
+        }
+         .page h2 {
+            font-weight: 700;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid #6366F1;
+            padding-bottom: 0.5rem;
+            color: #FFFFFF;
+        }
+        .page h3 {
+            font-weight: 500;
+            font-size: 1.5rem;
+            color: #C7D2FE;
+            margin-top: 1.5rem;
+             margin-bottom: 0.5rem;
+        }
+        .tagline {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #FFFFFF;
+            letter-spacing: 0.05em;
+            text-align: center;
+            margin: 1rem 0;
+            border: 2px solid #818CF8;
+            padding: 1rem 2rem;
+            display: inline-block;
+            background-color: rgba(255,255,255,0.05);
+        }
+        .tagline-sub {
+            font-size: 1.25rem;
+            font-style: italic;
+            font-weight: 300;
+            color: #D1D5DB;
+            text-align: center;
+        }
+        .card {
+            background-color: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            margin-top: 1rem;
+        }
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .kpi-card {
+            background-color: #1F2937;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            border-left: 4px solid #818CF8;
+        }
+        .kpi-card-title {
+            font-weight: 700;
+            color: #E5E7EB;
+        }
+        .kpi-card-value {
+            font-weight: 300;
+            font-size: 1.5rem;
+            color: #FFFFFF;
+        }
+        .prompt-code {
+            background-color: #000000;
+            color: #a7f3d0;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            font-family: monospace;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            font-size: 0.875rem;
+        }
+        .logo {
+            filter: invert(1) brightness(2);
+            width: 100px;
+            height: auto;
+        }
+        .gemini-tool-card {
+            background-color: #1F2937;
+            border-radius: 0.75rem;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+        .gemini-button {
+            background-color: #6366F1;
+            color: #FFFFFF;
+            font-weight: 700;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .gemini-button:hover {
+            background-color: #4F46E5;
+        }
+        .gemini-output {
+            background-color: #111827;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin-top: 1.5rem;
+            min-height: 100px;
+            white-space: pre-wrap;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+            color: #D1D5DB;
+        }
+        .loader {
+            width: 24px;
+            height: 24px;
+            border: 3px solid #FFF;
+            border-bottom-color: transparent;
+            border-radius: 50%;
+            display: inline-block;
+            box-sizing: border-box;
+            animation: rotation 1s linear infinite;
+        }
+        @keyframes rotation {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @media (min-width: 768px) {
+            .page {
+                padding: 6rem 4rem;
+            }
+            .page h1 {
+                 font-size: 5rem;
+            }
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- PÁGINA DE PORTADA -->
+    <div class="page page-cover text-center">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Volkswagen_logo_2019.svg/1024px-Volkswagen_logo_2019.svg.png" alt="Logo de Volkswagen" class="logo mx-auto mb-8">
+        <div class="max-w-4xl mx-auto">
+            <p class="text-indigo-300 text-lg uppercase tracking-widest">Documento Maestro de Campaña</p>
+            <h1>LA NUEVA ERA ELÉCTRICA</h1>
+            <p class="text-xl md:text-2xl mt-4 text-gray-300">Proyecto Volkswagen ID.4</p>
+            <div class="mt-12">
+                <div class="tagline">FEEL THE SHIFT.</div>
+                <p class="tagline-sub mt-4">La nueva era no se entiende, se siente.</p>
+            </div>
+             <p class="text-sm text-gray-500 mt-24">18 de Junio, 2025</p>
+        </div>
+    </div>
+
+    <!-- PÁGINA 2: EL BRIEF -->
+    <div class="page">
+        <div class="max-w-4xl w-full">
+            <h2>1.0 | EL BRIEF: Visión Estratégica</h2>
+            <h3>1.1 Objetivo General</h3>
+            <p class="text-lg font-light">
+                Crear una campaña transmedia inmersiva para el lanzamiento del SUV eléctrico ID.4, posicionándolo como el vehículo que marca un <strong>antes y un después</strong> en la vida de las personas. Buscamos generar awareness, engagement profundo y conversión, conectando con el usuario desde lo sensorial, lo visual y lo emocional.
+            </p>
+            
+            <h3 class="mt-12">1.2 KPIs de Éxito</h3>
+            <div class="kpi-grid">
+                <div class="kpi-card">
+                    <p class="kpi-card-title">AWARENESS</p>
+                    <p class="kpi-card-value">+2M Views Orgánicas</p>
+                </div>
+                <div class="kpi-card">
+                    <p class="kpi-card-title">ENGAGEMENT</p>
+                    <p class="kpi-card-value">+80% Finalización</p>
+                </div>
+                <div class="kpi-card">
+                    <p class="kpi-card-title">INTERACCIÓN</p>
+                    <p class="kpi-card-value">+25K Experiencias IA</p>
+                </div>
+                <div class="kpi-card">
+                    <p class="kpi-card-title">CONVERSIÓN</p>
+                    <p class="kpi-card-value">15% a Test Drives</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- PÁGINA 3: ESTRATEGIA CREATIVA -->
+    <div class="page">
+        <div class="max-w-4xl w-full">
+            <h2>2.0 | LA ESTRATEGIA CREATIVA</h2>
+            <h3>2.1 Diseño Visual: La Estética "Cyber-Organic"</h3>
+            <p class="text-lg font-light">
+                La fusión perfecta entre la <strong>precisión tecnológica y la fluidez impredecible de la naturaleza</strong>. Superficies de cromo líquido, cristal iridiscente y partículas de luz se combinan con patrones que imitan el crecimiento de las plantas o el movimiento de cardúmenes.
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-8 mt-12">
+                <div>
+                    <h3>2.2 Paleta de Colores</h3>
+                    <ul class="list-none space-y-4 mt-4 text-lg">
+                        <li class="flex items-center"><span class="w-6 h-6 rounded-full bg-indigo-500 mr-4"></span> 🔵 Base Tecnológica: Azules y púrpuras.</li>
+                        <li class="flex items-center"><span class="w-6 h-6 rounded-full bg-amber-400 mr-4"></span> 🟠 Acento Humano: Ámbar y oro rosado.</li>
+                        <li class="flex items-center"><span class="w-6 h-6 rounded-full bg-gray-900 border-2 border-gray-600 mr-4"></span> ⚫ Contraste Elegante: Negros y grises.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>2.3 Motivos Visuales Clave</h3>
+                     <ul class="list-none space-y-4 mt-4 text-lg">
+                        <li>✨ <strong>Flujo de Datos Orgánico:</strong> Data visualizada como enredaderas de luz.</li>
+                        <li>🚪 <strong>Portal de Luz Líquida:</strong> Umbral de energía hacia la nueva era.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- PÁGINA 4: ECOSISTEMA TRANSMEDIA -->
+    <div class="page">
+        <div class="max-w-4xl w-full">
+             <h2>3.0 | ECOSISTEMA TRANSMEDIA</h2>
+            <div class="space-y-8">
+                <div class="card">
+                    <h3 class="mt-0">📺 Spot TV (60”): "El Viaje"</h3>
+                    <p class="font-light">Una narrativa en tres actos sobre una protagonista que, atrapada en una rutina gris, redescubre la realidad a través del ID.4. El mundo se transforma en un paisaje "cyber-organic" lleno de luz y asombro.</p>
+                </div>
+                 <div class="card">
+                    <h3 class="mt-0">🏙️ Pantallas Urbanas: "El Portal"</h3>
+                    <p class="font-light">Loops hipnóticos de 15s donde el ID.4 emerge de un portal de luz líquida, con un QR gigante y un llamado a la acción claro: <strong>"Algo nuevo llegó. Escanealo."</strong></p>
+                </div>
+                <div class="card">
+                    <h3 class="mt-0">📱 Social Media: "Portal Moments"</h3>
+                    <p class="font-light">Reels y Stories sensoriales (9:16) con micro-experiencias: el sonido del futuro, los detalles del diseño fusionados con luz y POVs desde el interior del auto.</p>
+                </div>
+                 <div class="card">
+                    <h3 class="mt-0">🌍 Experiencia Web: "Tu Viaje Empezó"</h3>
+                    <p class="font-light">Portal inmersivo donde el usuario personaliza un viaje visual con IA basado en sus emociones. Al final, recibe un "Recuerdo Digital" compartible y un CTA para agendar un test drive.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PÁGINA 5: PROPUESTAS VISUALES -->
+    <div class="page">
+        <div class="max-w-4xl w-full">
+            <h2>4.0 | PROPUESTAS VISUALES: Moodboard</h2>
+            <div class="grid md:grid-cols-3 gap-8 text-center mt-8">
+                <div class="card">
+                    <h3 class="mt-0">✨ El Contacto Inicial</h3>
+                    <p class="font-light text-sm">Una onda de luz ámbar emana de la manija del auto al ser tocada. Sensación de intimidad y despertar.</p>
+                </div>
+                <div class="card">
+                     <h3 class="mt-0">🏞️ El Mundo Transformado</h3>
+                    <p class="font-light text-sm">La ciudad florece con filamentos de luz "cyber-organic". Sensación de asombro y redescubrimiento.</p>
+                </div>
+                <div class="card">
+                     <h3 class="mt-0">🚪 El Portal Urbano</h3>
+                    <p class="font-light text-sm">El ID.4 emerge de un portal de luz líquida en una pantalla gigante. Sensación de poder e inminencia.</p>
+                </div>
+            </div>
+             <p class="text-center mt-12 text-gray-400 font-light italic">
+                Cada imagen busca capturar el concepto "Feel the Shift", utilizando la luz, el color y el movimiento para evocar una transformación emocional profunda.
+            </p>
+        </div>
+    </div>
+    
+    <!-- PÁGINA 6: ANEXO TÉCNICO -->
+    <div class="page">
+        <div class="max-w-4xl w-full">
+            <h2>5.0 | ANEXO: Prompts para IA Generativa</h2>
+            
+            <h3>Para VEO 2 (Spot TV)</h3>
+            <div class="prompt-code">
+                cinematic 60s video, epic emotional tone, anamorphic lens, shot on ARRI Alexa. A young woman in a muted, desaturated city discovers a sleek Volkswagen ID.4. As she drives, the world outside transforms into a breathtaking 'cyber-organic' landscape: buildings bloom with neon data-vines, light particles flow like rivers. Close up on her face, showing awe and serenity. Epic wide shot of the ID.4 on a futuristic bridge. Final slate: text 'Feel the Shift' and a pulsing QR code. Style of a modern BMW or Apple commercial.
+            </div>
+
+            <h3 class="mt-8">Para Midjourney / DALL-E 3 (Key Visual)</h3>
+            <div class="prompt-code">
+                epic cinematic key visual, ultra-realistic. A Volkswagen ID.4 in moonstone grey, centered in a futuristic environment where nature and data merge. Bioluminescent flora and 'cyber-organic' light streams surround the car. Blue hour, color palette of electric blues, purples, and warm amber highlights reflecting on the car's surface. Moody, atmospheric lighting, shot with a 35mm lens, anamorphic style. Convey a sense of wonder, innovation, and emotional connection.
+            </div>
+        </div>
+    </div>
+
+    <!-- PÁGINA 7: HERRAMIENTAS IA -->
+    <div class="page">
+        <div class="max-w-4xl w-full">
+            <h2>6.0 | Herramientas de Campaña IA ✨</h2>
+            <p class="text-lg font-light mb-8">Utiliza el poder de Gemini para acelerar la creación de contenido para la campaña. Haz clic en los botones para generar borradores creativos al instante.</p>
+
+            <!-- Herramienta 1: Generador de Posts -->
+            <div class="gemini-tool-card">
+                <h3 class="!mt-0">✨ Generador de Posts para Redes Sociales</h3>
+                <p class="text-indigo-200 font-light mb-4">Crea un post para Instagram o TikTok basado en el concepto "Portal Moments".</p>
+                <button id="generate-social-btn" class="gemini-button">
+                    <span>Generar Post</span>
+                </button>
+                <div id="social-output" class="gemini-output">El contenido generado aparecerá aquí...</div>
+            </div>
+
+            <!-- Herramienta 2: Redactor de Emails -->
+            <div class="gemini-tool-card">
+                <h3 class="!mt-0">✨ Redactor de Emails para Test Drive</h3>
+                <p class="text-indigo-200 font-light mb-4">Redacta un email para un usuario que completó la experiencia web "Tu Viaje Empezó", invitándolo a un test drive.</p>
+                <button id="generate-email-btn" class="gemini-button">
+                    <span>Redactar Email</span>
+                </button>
+                <div id="email-output" class="gemini-output">El contenido generado aparecerá aquí...</div>
+            </div>
+
+            <!-- Herramienta 3: Ideador de Slogans -->
+            <div class="gemini-tool-card">
+                <h3 class="!mt-0">✨ Ideador de Slogans Alternativos</h3>
+                <p class="text-indigo-200 font-light mb-4">Genera 3 slogans alternativos que capturen la esencia de "Feel the Shift".</p>
+                <button id="generate-slogan-btn" class="gemini-button">
+                    <span>Generar Slogans</span>
+                </button>
+                <div id="slogan-output" class="gemini-output">El contenido generado aparecerá aquí...</div>
+            </div>
+
+        </div>
+    </div>
+    
+    <script type="module">
+        // Helper function to call the Gemini API
+        async function callGemini(prompt, buttonElement, outputElement) {
+            const originalButtonText = buttonElement.innerHTML;
+            buttonElement.innerHTML = '<span class="loader"></span> Generando...';
+            buttonElement.disabled = true;
+            outputElement.textContent = 'Contactando a la IA...';
+
+            let chatHistory = [{ role: "user", parts: [{ text: prompt }] }];
+            const payload = { contents: chatHistory };
+            const apiKey = ""; // API key is handled by the environment
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) {
+                    throw new Error(`Error de red: ${response.statusText}`);
+                }
+
+                const result = await response.json();
+                
+                if (result.candidates && result.candidates.length > 0 &&
+                    result.candidates[0].content && result.candidates[0].content.parts &&
+                    result.candidates[0].content.parts.length > 0) {
+                    const text = result.candidates[0].content.parts[0].text;
+                    outputElement.textContent = text.trim();
+                } else {
+                    let errorMessage = 'No se recibió contenido válido de la IA.';
+                    if(result.promptFeedback && result.promptFeedback.blockReason){
+                       errorMessage += ` Razón: ${result.promptFeedback.blockReason}`;
+                    }
+                    outputElement.textContent = errorMessage;
+                }
+
+            } catch (error) {
+                console.error("Error al llamar a la API de Gemini:", error);
+                outputElement.textContent = `Ocurrió un error al contactar a la IA. Por favor, revisa la consola para más detalles.`;
+            } finally {
+                buttonElement.innerHTML = originalButtonText;
+                buttonElement.disabled = false;
+            }
+        }
+
+        // --- Event Listeners ---
+        
+        // Social Post Generator
+        document.getElementById('generate-social-btn').addEventListener('click', () => {
+            const prompt = `Actúa como un social media manager experto para Volkswagen. Crea un borrador para un post de Instagram Reels/TikTok para la campaña del VW ID.4.
+            Concepto central: "Portal Moments".
+            Slogan: "Feel the Shift".
+            Estética: "Cyber-Organic" (fusión de tecnología precisa y naturaleza fluida, con luces de neón y patrones orgánicos).
+            El post debe ser corto, sensorial y visualmente evocador. Incluye una idea para el video, el texto del post, y hashtags relevantes.`;
+            callGemini(prompt, document.getElementById('generate-social-btn'), document.getElementById('social-output'));
+        });
+
+        // Email Draft Generator
+        document.getElementById('generate-email-btn').addEventListener('click', () => {
+            const prompt = `Actúa como un experto en marketing por correo electrónico de Volkswagen. Redacta un email persuasivo y elegante.
+            Objetivo: Invitar al usuario a agendar un test drive del nuevo VW ID.4.
+            Contexto: El usuario acaba de completar la experiencia web inmersiva "Tu Viaje Empezó", donde creó un viaje visual personalizado.
+            Tono: Personal, inspirador y enfocado en la sensación, no solo en las características técnicas.
+            Puntos clave a mencionar:
+            1. Referencia a la experiencia web que acaban de vivir.
+            2. Conectar esa experiencia digital con la sensación real de conducir el ID.4.
+            3. El slogan "Feel the Shift" debe aparecer.
+            4. Un Call to Action (CTA) claro y atractivo para agendar el test drive.
+            Formato: Asunto, Cuerpo del email.`;
+            callGemini(prompt, document.getElementById('generate-email-btn'), document.getElementById('email-output'));
+        });
+
+        // Slogan Generator
+        document.getElementById('generate-slogan-btn').addEventListener('click', () => {
+            const prompt = `Actúa como un director creativo de una agencia de publicidad de primer nivel. Estás trabajando en la campaña del nuevo SUV eléctrico Volkswagen ID.4.
+            El concepto principal es sobre la transformación, el cambio de era, y una nueva forma de sentir la conducción y la vida. El slogan actual es "Feel the Shift".
+            Tu tarea es generar 3 slogans alternativos que capturen esta misma esencia. Deben ser cortos, potentes, memorables y en inglés.`;
+            callGemini(prompt, document.getElementById('generate-slogan-btn'), document.getElementById('slogan-output'));
+        });
+
+    </script>
+    
+</body>
+</html>
