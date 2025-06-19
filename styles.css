@@ -113,19 +113,15 @@ html {
     @apply inline-flex items-center justify-center px-8 py-4 font-montserrat font-semibold text-lg border-2 border-cyber-primary text-cyber-primary rounded-full hover:bg-cyber-primary hover:text-white transition-all duration-300 relative overflow-hidden;
 }
 
-.cyber-button::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
-    transition: left 0.6s ease;
+/* Smooth button without problematic animations */
+.smooth-cyber-button {
+    position: relative;
+    overflow: hidden;
 }
 
-.cyber-button:hover::before {
-    left: 100%;
+.smooth-cyber-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(99, 102, 241, 0.3);
 }
 
 .cyber-button-sm {
@@ -159,7 +155,19 @@ html {
 .concept-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 20px 40px rgba(99, 102, 241, 0.1);
-    background: rgba(55, 65, 81, 0.6);
+    background: rgba(55, 65, 81, 0.8);
+}
+
+/* Content Cards */
+.content-card {
+    transform: translateY(0);
+    transition: all 0.3s ease;
+}
+
+.content-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(99, 102, 241, 0.15);
+    background: rgba(55, 65, 81, 0.8);
 }
 
 .icon-container {
