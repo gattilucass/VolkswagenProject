@@ -1,0 +1,143 @@
+Quiero que generes el código completo de una página web profesional e inmersiva para presentar un proyecto conceptual de campaña publicitaria creada con IA Generativa. La campaña es para el lanzamiento del Volkswagen ID.4 bajo el lema “La Nueva Era Eléctrica”, con estética cyber-organic, tono emocional y un enfoque transmedia innovador.
+La web se alojará en Vercel, por lo tanto el código debe estar preparado para deploy directo. Usar HTML5, TailwindCSS, y animaciones suaves con Framer Motion (o alternativa con JavaScript puro o Tailwind Plugins).
+
+⚙️ Requisitos técnicos
+Lenguaje: HTML + Tailwind CSS (sin frameworks como React, Svelte, etc.)
+
+Estilo: Oscuro, elegante, minimalista, bien espaciado y con simetría.
+
+Animaciones: Suaves, fluidas, al hacer scroll o hover.
+
+Responsiva: Mobile-first, con diseño adaptable a todos los dispositivos.
+
+Interactividad: Video embed, sliders, hover states, botones interactivos.
+
+Preparado para agregar textos, imágenes y videos desde carpeta /assets.
+
+🎨 Paleta de colores (Cyber-Organic)
+Fondo: #0D0D0D (casi negro)
+
+Primario: #5C4DFF (azul neón suave)
+
+Secundario: #A863F3 (púrpura eléctrico)
+
+Acento: #F5C169 (ámbar cálido para destacar)
+
+Texto principal: #EAEAEA
+
+Texto secundario: #A1A1A1
+
+🔤 Tipografía sugerida
+Usar tipografías Google Fonts:
+
+Titulares: Orbitron (moderno y tecnológico)
+
+Texto corrido: Inter o Poppins, 400-600
+
+📐 Estructura de la Web
+Intro (Hero Section)
+
+Pantalla completa
+
+Logo VW animado (o placeholder)
+
+Tagline: “Feel the Shift.”
+
+CTA: botón animado para iniciar el recorrido
+
+Background animado (partículas o efecto glow suave)
+
+Sección 1: El Concepto
+
+Título: “La Nueva Era Eléctrica”
+
+Subtítulo con storytelling breve
+
+Imagen o video background (silencioso y en loop)
+
+Texto explicativo y botón: “Ver Proyecto”
+
+Sección 2: El Proyecto
+
+Grid con 3 bloques:
+
+Naming & Estrategia Creativa
+
+Storytelling Visual
+
+Experiencia Interactiva Web
+
+Cada bloque tiene:
+
+Icono animado
+
+Breve descripción
+
+Botón: “Ver Detalles” (scroll a secciones internas)
+
+Sección 3: Key Visuals
+
+Carrusel/slider horizontal
+
+Imágenes generadas por IA
+
+Hover: ampliar + mostrar detalles del prompt usado
+
+CTA: “Ver todos los visuales” (lightbox o modal)
+
+Sección 4: Spot Publicitario
+
+Embed de video VEO 2 (responsive)
+
+Texto lateral: guion técnico, referencia visual, prompt
+
+Botón: “Descargar Storyboard”
+
+Sección 5: Activaciones Transmedia
+
+Mockups en pantallas LED, redes, TV, celulares
+
+Sub-secciones tipo tabs:
+
+TV Spot
+
+Pantallas Urbanas
+
+Redes Sociales (Reels / TikToks)
+
+QR Experience
+
+Cada una con imagen, descripción y racional
+
+Sección 6: Web Interactiva ID.4
+
+Muestra de la experiencia inmersiva
+
+Botón de prueba (abre modal o scroll a preview)
+
+Texto + mockups del viaje emocional generado
+
+Sección 7: El Equipo IA
+
+Cards de cada IA utilizada (ChatGPT, Gemini, VEO2, etc.)
+
+Rol, herramientas, prompts clave
+
+Iconos animados (hover reveals)
+
+Sección Final: CTA + Contacto
+
+Frase motivadora
+
+Botón “Solicitá una demo” o “Agendá una reunión”
+
+Footer simple, íconos redes, créditos
+
+🔧 Extras que puede incluir la IA
+Archivo index.html + /styles.css
+
+Carpeta /assets lista para subir tus visuales y videos
+
+Archivo README.md para subirlo a GitHub con descripción del proyecto
+
+Código modular, limpio, con clases de Tailwind claras y comentadas
