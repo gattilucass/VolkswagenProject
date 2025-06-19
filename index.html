@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VW ID.4 - La Nueva Era Eléctrica | Campaña IA Generativa</title>
+    <title>Campaña VW ID.4 – "La Nueva Era Eléctrica"</title>
     <meta name="description" content="Campaña publicitaria conceptual para Volkswagen ID.4 creada con IA Generativa. Descubre la nueva era eléctrica con estética cyber-organic.">
     
     <!-- Tailwind CSS CDN -->
@@ -12,7 +12,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     
     <!-- Feather Icons -->
     <script src="https://unpkg.com/feather-icons"></script>
@@ -34,7 +34,6 @@
                         'cyber-text-secondary': '#D1D5DB'
                     },
                     fontFamily: {
-                        'orbitron': ['Orbitron', 'monospace'],
                         'montserrat': ['Montserrat', 'sans-serif']
                     },
                     animation: {
@@ -54,7 +53,7 @@
     <nav class="fixed top-0 w-full z-50 bg-cyber-dark/80 backdrop-blur-md border-b border-cyber-primary/20">
         <div class="container mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
-                <div class="font-orbitron font-bold text-xl text-cyber-primary">
+                <div class="font-montserrat font-bold text-xl text-cyber-primary">
                     VW ID.4
                 </div>
                 <div class="hidden md:flex space-x-8">
@@ -101,13 +100,13 @@
             </div>
             
             <!-- Main Headline -->
-            <h1 class="font-orbitron font-bold text-4xl md:text-7xl lg:text-8xl mb-6 animate-slide-in text-center">
+            <h1 class="font-montserrat font-black text-4xl md:text-7xl lg:text-8xl mb-6 animate-slide-in text-center tracking-tight">
                 <span class="text-cyber-primary">LA NUEVA</span><br>
                 <span class="text-cyber-accent">ERA ELÉCTRICA</span>
             </h1>
             
             <!-- Tagline -->
-            <p class="font-orbitron text-xl md:text-2xl text-cyber-text-secondary mb-8 animate-fade-in text-center" style="animation-delay: 0.5s;">
+            <p class="font-montserrat font-medium text-xl md:text-2xl text-cyber-text-secondary mb-8 animate-fade-in text-center tracking-wide" style="animation-delay: 0.5s;">
                 Feel the Shift.
             </p>
             
@@ -131,10 +130,10 @@
         <div class="container mx-auto px-6">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <div class="order-2 lg:order-1">
-                    <h2 class="font-orbitron font-bold text-4xl md:text-5xl mb-6 text-cyber-primary fade-in-on-scroll">
+                    <h2 class="font-montserrat font-black text-4xl md:text-5xl mb-6 text-cyber-primary fade-in-on-scroll">
                         El Concepto
                     </h2>
-                    <h3 class="font-orbitron text-2xl md:text-3xl mb-8 text-cyber-accent fade-in-on-scroll">
+                    <h3 class="font-montserrat font-bold text-2xl md:text-3xl mb-8 text-cyber-accent fade-in-on-scroll">
                         La Nueva Era Eléctrica
                     </h3>
                     <p class="text-lg text-cyber-text-secondary mb-8 leading-relaxed fade-in-on-scroll">
@@ -167,63 +166,69 @@
     <!-- Project Section -->
     <section id="project" class="py-20 bg-gradient-to-b from-transparent to-cyber-primary/5">
         <div class="container mx-auto px-6">
-            <h2 class="font-orbitron font-bold text-4xl md:text-5xl text-center mb-16 text-cyber-primary fade-in-on-scroll">
+            <h2 class="font-montserrat font-black text-4xl md:text-5xl text-center mb-16 text-cyber-primary fade-in-on-scroll">
                 El Proyecto
             </h2>
             
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Naming & Creative Strategy -->
-                <div class="project-card group fade-in-on-scroll">
-                    <div class="icon-container">
+                <div class="project-card group fade-in-on-scroll h-full flex flex-col">
+                    <div class="icon-container mx-auto">
                         <i data-feather="edit-3" class="w-12 h-12 text-cyber-accent"></i>
                     </div>
-                    <h3 class="font-orbitron font-semibold text-xl mb-4 text-cyber-text">
+                    <h3 class="font-montserrat font-bold text-xl mb-4 text-cyber-text text-center">
                         Naming & Estrategia Creativa
                     </h3>
-                    <p class="text-cyber-text-secondary mb-6 leading-relaxed">
+                    <p class="text-cyber-text-secondary mb-6 leading-relaxed text-center flex-grow">
                         Desarrollo de identidad verbal y estrategia creativa basada en insights emocionales 
                         y tendencias tecnológicas, creando una narrativa coherente y disruptiva.
                     </p>
-                    <button class="cyber-button-sm" onclick="scrollToSection('brand-strategy')">
-                        Ver Detalles
-                        <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
-                    </button>
+                    <div class="flex justify-center mt-auto">
+                        <button class="cyber-button-sm" onclick="scrollToSection('brand-strategy')">
+                            Ver Detalles
+                            <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                        </button>
+                    </div>
                 </div>
                 
                 <!-- Visual Storytelling -->
-                <div class="project-card group fade-in-on-scroll" style="animation-delay: 0.2s;">
-                    <div class="icon-container">
+                <div class="project-card group fade-in-on-scroll h-full flex flex-col" style="animation-delay: 0.2s;">
+                    <div class="icon-container mx-auto">
                         <i data-feather="image" class="w-12 h-12 text-cyber-accent"></i>
                     </div>
-                    <h3 class="font-orbitron font-semibold text-xl mb-4 text-cyber-text">
+                    <h3 class="font-montserrat font-bold text-xl mb-4 text-cyber-text text-center">
                         Storytelling Visual
                     </h3>
-                    <p class="text-cyber-text-secondary mb-6 leading-relaxed">
+                    <p class="text-cyber-text-secondary mb-6 leading-relaxed text-center flex-grow">
                         Creación de universo visual mediante IA generativa, desarrollando key visuals 
                         que conectan emocionalmente con la audiencia a través de estética cyber-organic.
                     </p>
-                    <button class="cyber-button-sm" onclick="scrollToSection('visuals')">
-                        Ver Detalles
-                        <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
-                    </button>
+                    <div class="flex justify-center mt-auto">
+                        <button class="cyber-button-sm" onclick="scrollToSection('visuals')">
+                            Ver Detalles
+                            <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                        </button>
+                    </div>
                 </div>
                 
                 <!-- Interactive Web Experience -->
-                <div class="project-card group fade-in-on-scroll" style="animation-delay: 0.4s;">
-                    <div class="icon-container">
+                <div class="project-card group fade-in-on-scroll h-full flex flex-col" style="animation-delay: 0.4s;">
+                    <div class="icon-container mx-auto">
                         <i data-feather="monitor" class="w-12 h-12 text-cyber-accent"></i>
                     </div>
-                    <h3 class="font-orbitron font-semibold text-xl mb-4 text-cyber-text">
+                    <h3 class="font-montserrat font-bold text-xl mb-4 text-cyber-text text-center">
                         Experiencia Interactiva Web
                     </h3>
-                    <p class="text-cyber-text-secondary mb-6 leading-relaxed">
+                    <p class="text-cyber-text-secondary mb-6 leading-relaxed text-center flex-grow">
                         Desarrollo de plataforma digital inmersiva que permite a los usuarios 
                         experimentar el viaje emocional del ID.4 de manera personalizada e interactiva.
                     </p>
-                    <button class="cyber-button-sm" onclick="scrollToSection('interactive')">
-                        Ver Detalles
-                        <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
-                    </button>
+                    <div class="flex justify-center mt-auto">
+                        <button class="cyber-button-sm" onclick="scrollToSection('interactive')">
+                            Ver Detalles
+                            <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -232,26 +237,26 @@
     <!-- Brand Strategy Section -->
     <section id="brand-strategy" class="py-20 bg-gradient-to-b from-cyber-primary/5 to-transparent">
         <div class="container mx-auto px-6">
-            <h2 class="font-orbitron font-bold text-4xl md:text-5xl text-center mb-16 text-cyber-primary fade-in-on-scroll">
+            <h2 class="font-montserrat font-black text-4xl md:text-5xl text-center mb-16 text-cyber-primary fade-in-on-scroll">
                 Naming & Estrategia Creativa
             </h2>
             
             <div class="grid lg:grid-cols-2 gap-12">
                 <!-- Brand Identity -->
                 <div class="fade-in-on-scroll">
-                    <h3 class="font-orbitron font-semibold text-3xl mb-8 text-cyber-accent">Identidad de Marca</h3>
+                    <h3 class="font-montserrat font-bold text-3xl mb-8 text-cyber-accent">Identidad de Marca</h3>
                     
                     <div class="space-y-6">
                         <div class="bg-gray-800/40 p-6 rounded-xl border border-gray-600/40">
-                            <h4 class="font-orbitron font-medium text-xl mb-4 text-cyber-text">Concepto Principal</h4>
+                            <h4 class="font-montserrat font-semibold text-xl mb-4 text-cyber-text">Concepto Principal</h4>
                             <div class="text-center p-8 bg-gradient-to-br from-cyber-primary/10 to-cyber-secondary/10 rounded-lg border border-cyber-primary/30">
-                                <p class="font-orbitron text-3xl font-bold text-cyber-primary mb-2">"LA NUEVA ERA ELÉCTRICA"</p>
-                                <p class="font-orbitron text-xl text-cyber-accent">Feel the Shift.</p>
+                                <p class="font-montserrat text-3xl font-black text-cyber-primary mb-2">"LA NUEVA ERA ELÉCTRICA"</p>
+                                <p class="font-montserrat text-xl font-bold text-cyber-accent">Feel the Shift.</p>
                             </div>
                         </div>
                         
                         <div class="bg-gray-800/40 p-6 rounded-xl border border-gray-600/40">
-                            <h4 class="font-orbitron font-medium text-xl mb-4 text-cyber-text">Paleta de Colores</h4>
+                            <h4 class="font-montserrat font-semibold text-xl mb-4 text-cyber-text">Paleta de Colores</h4>
                             <div class="grid grid-cols-2 gap-4">
                                 <div class="text-center p-4 bg-cyber-primary rounded-lg">
                                     <p class="text-white font-medium">#6366F1</p>
@@ -276,25 +281,25 @@
                 
                 <!-- Typography & Design Elements -->
                 <div class="fade-in-on-scroll">
-                    <h3 class="font-orbitron font-semibold text-3xl mb-8 text-cyber-accent">Elementos de Diseño</h3>
+                    <h3 class="font-montserrat font-bold text-3xl mb-8 text-cyber-accent">Elementos de Diseño</h3>
                     
                     <div class="space-y-6">
                         <div class="bg-gray-800/40 p-6 rounded-xl border border-gray-600/40">
-                            <h4 class="font-orbitron font-medium text-xl mb-4 text-cyber-text">Tipografía</h4>
+                            <h4 class="font-montserrat font-semibold text-xl mb-4 text-cyber-text">Tipografía</h4>
                             <div class="space-y-4">
                                 <div class="p-4 bg-cyber-dark rounded-lg">
-                                    <p class="font-orbitron text-2xl text-cyber-primary mb-2">Orbitron</p>
-                                    <p class="text-cyber-text-secondary text-sm">Títulos y elementos destacados - Tecnológico y futurista</p>
+                                    <p class="font-montserrat text-2xl font-black text-cyber-primary mb-2">Montserrat</p>
+                                    <p class="text-cyber-text-secondary text-sm">Fuente principal - Moderna, versátil y profesional</p>
                                 </div>
                                 <div class="p-4 bg-cyber-dark rounded-lg">
-                                    <p class="font-montserrat text-xl text-cyber-text mb-2">Montserrat</p>
-                                    <p class="text-cyber-text-secondary text-sm">Texto principal - Legible y profesional</p>
+                                    <p class="font-montserrat text-xl font-bold text-cyber-text mb-2">Pesos: 300, 400, 500, 700, 900</p>
+                                    <p class="text-cyber-text-secondary text-sm">Desde Light hasta Black para jerarquía visual clara</p>
                                 </div>
                             </div>
                         </div>
                         
                         <div class="bg-gray-800/40 p-6 rounded-xl border border-gray-600/40">
-                            <h4 class="font-orbitron font-medium text-xl mb-4 text-cyber-text">Estética Cyber-Organic</h4>
+                            <h4 class="font-montserrat font-semibold text-xl mb-4 text-cyber-text">Estética Cyber-Organic</h4>
                             <ul class="space-y-3 text-cyber-text-secondary">
                                 <li class="flex items-start space-x-3">
                                     <i data-feather="zap" class="w-5 h-5 text-cyber-accent mt-0.5 flex-shrink-0"></i>
@@ -320,21 +325,21 @@
             
             <!-- Strategic Pillars -->
             <div class="mt-16 fade-in-on-scroll">
-                <h3 class="font-orbitron font-semibold text-3xl mb-8 text-center text-cyber-accent">Pilares Estratégicos</h3>
+                <h3 class="font-montserrat font-bold text-3xl mb-8 text-center text-cyber-accent">Pilares Estratégicos</h3>
                 <div class="grid md:grid-cols-3 gap-8">
                     <div class="text-center p-8 bg-gray-800/40 rounded-xl border border-gray-600/40">
                         <i data-feather="trending-up" class="w-12 h-12 text-cyber-primary mx-auto mb-4"></i>
-                        <h4 class="font-orbitron font-medium text-xl mb-3 text-cyber-text">Innovación</h4>
+                        <h4 class="font-montserrat font-bold text-xl mb-3 text-cyber-text">Innovación</h4>
                         <p class="text-cyber-text-secondary">Tecnología de vanguardia que redefine la experiencia de conducción</p>
                     </div>
                     <div class="text-center p-8 bg-gray-800/40 rounded-xl border border-gray-600/40">
                         <i data-feather="heart" class="w-12 h-12 text-cyber-secondary mx-auto mb-4"></i>
-                        <h4 class="font-orbitron font-medium text-xl mb-3 text-cyber-text">Emoción</h4>
+                        <h4 class="font-montserrat font-bold text-xl mb-3 text-cyber-text">Emoción</h4>
                         <p class="text-cyber-text-secondary">Conexión emocional profunda con el futuro sostenible</p>
                     </div>
                     <div class="text-center p-8 bg-gray-800/40 rounded-xl border border-gray-600/40">
                         <i data-feather="globe" class="w-12 h-12 text-cyber-accent mx-auto mb-4"></i>
-                        <h4 class="font-orbitron font-medium text-xl mb-3 text-cyber-text">Transformación</h4>
+                        <h4 class="font-montserrat font-bold text-xl mb-3 text-cyber-text">Transformación</h4>
                         <p class="text-cyber-text-secondary">Cambio hacia un mundo más limpio y eficiente</p>
                     </div>
                 </div>
@@ -345,7 +350,7 @@
     <!-- Key Visuals Section -->
     <section id="visuals" class="py-20">
         <div class="container mx-auto px-6">
-            <h2 class="font-orbitron font-bold text-4xl md:text-5xl text-center mb-4 text-cyber-primary fade-in-on-scroll">
+            <h2 class="font-montserrat font-black text-4xl md:text-5xl text-center mb-4 text-cyber-primary fade-in-on-scroll">
                 Key Visuals
             </h2>
             <p class="text-center text-cyber-text-secondary mb-16 fade-in-on-scroll">
@@ -732,7 +737,7 @@
     <!-- AI Team Section -->
     <section id="ai-team" class="py-20">
         <div class="container mx-auto px-6">
-            <h2 class="font-orbitron font-bold text-4xl md:text-5xl text-center mb-16 text-cyber-primary fade-in-on-scroll">
+            <h2 class="font-montserrat font-black text-4xl md:text-5xl text-center mb-16 text-cyber-primary fade-in-on-scroll">
                 El Equipo IA
             </h2>
             
@@ -742,7 +747,7 @@
                     <div class="ai-icon-container">
                         <i data-feather="message-circle" class="w-8 h-8 text-cyber-primary"></i>
                     </div>
-                    <h3 class="font-orbitron font-semibold text-lg mb-2 text-cyber-primary">ChatGPT</h3>
+                    <h3 class="font-montserrat font-bold text-lg mb-2 text-cyber-primary">ChatGPT</h3>
                     <p class="text-cyber-text-secondary text-sm mb-4">Estrategia & Naming</p>
                     <div class="ai-details opacity-0 group-hover:opacity-100 transition-all duration-300">
                         <p class="text-xs text-cyber-text-secondary mb-2">
@@ -759,7 +764,7 @@
                     <div class="ai-icon-container">
                         <i data-feather="star" class="w-8 h-8 text-cyber-secondary"></i>
                     </div>
-                    <h3 class="font-orbitron font-semibold text-lg mb-2 text-cyber-secondary">Gemini</h3>
+                    <h3 class="font-montserrat font-bold text-lg mb-2 text-cyber-secondary">Gemini</h3>
                     <p class="text-cyber-text-secondary text-sm mb-4">Análisis & Insights</p>
                     <div class="ai-details opacity-0 group-hover:opacity-100 transition-all duration-300">
                         <p class="text-xs text-cyber-text-secondary mb-2">
@@ -776,7 +781,7 @@
                     <div class="ai-icon-container">
                         <i data-feather="video" class="w-8 h-8 text-cyber-accent"></i>
                     </div>
-                    <h3 class="font-orbitron font-semibold text-lg mb-2 text-cyber-accent">VEO 2</h3>
+                    <h3 class="font-montserrat font-bold text-lg mb-2 text-cyber-accent">VEO 2</h3>
                     <p class="text-cyber-text-secondary text-sm mb-4">Video Generativo</p>
                     <div class="ai-details opacity-0 group-hover:opacity-100 transition-all duration-300">
                         <p class="text-xs text-cyber-text-secondary mb-2">
@@ -793,7 +798,7 @@
                     <div class="ai-icon-container">
                         <i data-feather="image" class="w-8 h-8 text-cyber-primary"></i>
                     </div>
-                    <h3 class="font-orbitron font-semibold text-lg mb-2 text-cyber-primary">Midjourney</h3>
+                    <h3 class="font-montserrat font-bold text-lg mb-2 text-cyber-primary">Midjourney</h3>
                     <p class="text-cyber-text-secondary text-sm mb-4">Key Visuals</p>
                     <div class="ai-details opacity-0 group-hover:opacity-100 transition-all duration-300">
                         <p class="text-xs text-cyber-text-secondary mb-2">
@@ -808,110 +813,7 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-gradient-to-b from-cyber-primary/5 to-cyber-dark">
-        <div class="container mx-auto px-6">
-            <div class="text-center fade-in-on-scroll">
-                <h2 class="font-orbitron font-bold text-4xl md:text-5xl mb-8 text-cyber-primary">Contacto</h2>
-                <p class="text-xl text-cyber-text-secondary mb-12 max-w-3xl mx-auto">
-                    ¿Interesado en implementar campañas innovadoras con IA? Conectemos y exploremos las posibilidades del futuro publicitario.
-                </p>
-            </div>
-            
-            <div class="grid lg:grid-cols-2 gap-12 items-start">
-                <!-- Contact Form -->
-                <div class="fade-in-on-scroll">
-                    <form onsubmit="handleContactForm(event)" class="space-y-6">
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <div>
-                                <label for="name" class="block text-cyber-text font-medium mb-2">Nombre *</label>
-                                <input type="text" id="name" name="name" required
-                                    class="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/40 rounded-lg text-cyber-text focus:border-cyber-primary focus:outline-none transition-colors">
-                            </div>
-                            <div>
-                                <label for="email" class="block text-cyber-text font-medium mb-2">Email *</label>
-                                <input type="email" id="email" name="email" required
-                                    class="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/40 rounded-lg text-cyber-text focus:border-cyber-primary focus:outline-none transition-colors">
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <label for="company" class="block text-cyber-text font-medium mb-2">Empresa</label>
-                            <input type="text" id="company" name="company"
-                                class="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/40 rounded-lg text-cyber-text focus:border-cyber-primary focus:outline-none transition-colors">
-                        </div>
-                        
-                        <div>
-                            <label for="interest_level" class="block text-cyber-text font-medium mb-2">Nivel de Interés</label>
-                            <select id="interest_level" name="interest_level"
-                                class="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/40 rounded-lg text-cyber-text focus:border-cyber-primary focus:outline-none transition-colors">
-                                <option value="consultation">Consultoría</option>
-                                <option value="campaign">Campaña Completa</option>
-                                <option value="workshop">Workshop IA</option>
-                                <option value="demo">Demo Técnica</option>
-                            </select>
-                        </div>
-                        
-                        <div>
-                            <label for="message" class="block text-cyber-text font-medium mb-2">Mensaje *</label>
-                            <textarea id="message" name="message" rows="4" required
-                                class="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/40 rounded-lg text-cyber-text focus:border-cyber-primary focus:outline-none transition-colors resize-none"
-                                placeholder="Cuéntanos sobre tu proyecto o necesidades..."></textarea>
-                        </div>
-                        
-                        <button type="submit" class="cyber-button w-full justify-center">
-                            Enviar Mensaje
-                            <i data-feather="send" class="ml-2 w-5 h-5"></i>
-                        </button>
-                    </form>
-                </div>
-                
-                <!-- Contact Info -->
-                <div class="fade-in-on-scroll">
-                    <div class="bg-gray-800/40 p-8 rounded-xl border border-gray-600/40">
-                        <h3 class="font-orbitron font-semibold text-2xl mb-6 text-cyber-accent">Hablemos del Futuro</h3>
-                        <p class="text-cyber-text-secondary mb-8 leading-relaxed">
-                            Este proyecto demuestra el poder transformador de la IA en la publicidad. 
-                            Desde la estrategia hasta la ejecución, cada elemento fue creado con herramientas de inteligencia artificial.
-                        </p>
-                        
-                        <div class="space-y-6">
-                            <div class="flex items-start space-x-4">
-                                <i data-feather="zap" class="w-6 h-6 text-cyber-primary mt-1"></i>
-                                <div>
-                                    <h4 class="font-medium text-cyber-text mb-1">Innovación IA</h4>
-                                    <p class="text-cyber-text-secondary text-sm">Campañas 100% generadas con inteligencia artificial</p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-start space-x-4">
-                                <i data-feather="target" class="w-6 h-6 text-cyber-secondary mt-1"></i>
-                                <div>
-                                    <h4 class="font-medium text-cyber-text mb-1">Resultados Medibles</h4>
-                                    <p class="text-cyber-text-secondary text-sm">Analytics avanzados y optimización continua</p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-start space-x-4">
-                                <i data-feather="users" class="w-6 h-6 text-cyber-accent mt-1"></i>
-                                <div>
-                                    <h4 class="font-medium text-cyber-text mb-1">Experiencia Personalizada</h4>
-                                    <p class="text-cyber-text-secondary text-sm">Contenido adaptado a cada audiencia</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="mt-8 pt-6 border-t border-gray-600/40">
-                            <p class="text-cyber-text-secondary text-sm text-center">
-                                <i data-feather="database" class="w-4 h-4 inline mr-2"></i>
-                                Datos seguros con PostgreSQL
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
 
     <!-- Footer -->
     <footer class="py-12 bg-cyber-dark border-t border-gray-600/40">
@@ -922,7 +824,7 @@
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Volkswagen_logo_2019.svg/1024px-Volkswagen_logo_2019.svg.png" 
                              alt="Volkswagen Logo" 
                              class="w-8 h-8 filter brightness-0 invert mr-3">
-                        <span class="font-orbitron font-bold text-xl text-cyber-primary">ID.4 Campaign</span>
+                        <span class="font-montserrat font-bold text-xl text-cyber-primary">ID.4 Campaign</span>
                     </div>
                     <p class="text-cyber-text-secondary text-sm">
                         Campaña conceptual creada con IA Generativa para demostrar el futuro de la publicidad automotriz.
@@ -930,7 +832,7 @@
                 </div>
                 
                 <div>
-                    <h4 class="font-orbitron font-semibold mb-4 text-cyber-text">Herramientas IA</h4>
+                    <h4 class="font-montserrat font-bold mb-4 text-cyber-text">Herramientas IA</h4>
                     <ul class="space-y-2 text-cyber-text-secondary text-sm">
                         <li>ChatGPT - Estrategia</li>
                         <li>Midjourney - Visuales</li>
@@ -940,7 +842,7 @@
                 </div>
                 
                 <div>
-                    <h4 class="font-orbitron font-semibold mb-4 text-cyber-text">Enlaces</h4>
+                    <h4 class="font-montserrat font-bold mb-4 text-cyber-text">Enlaces</h4>
                     <div class="space-y-2">
                         <a href="/admin/dashboard" class="block text-cyber-text-secondary text-sm hover:text-cyber-primary transition-colors">
                             Dashboard Analytics

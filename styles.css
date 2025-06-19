@@ -133,7 +133,7 @@ html {
 }
 
 .cyber-button-outline {
-    @apply inline-flex items-center px-8 py-4 font-orbitron font-semibold text-lg border-2 border-cyber-accent text-cyber-accent rounded-full hover:bg-cyber-accent hover:text-cyber-dark transition-all duration-300;
+    @apply inline-flex items-center px-8 py-4 font-montserrat font-semibold text-lg border-2 border-cyber-accent text-cyber-accent rounded-full hover:bg-cyber-accent hover:text-cyber-dark transition-all duration-300;
 }
 
 /* Project Cards */
@@ -151,11 +151,13 @@ html {
 .icon-container {
     @apply w-16 h-16 bg-gray-900 rounded-xl flex items-center justify-center mb-6 border border-cyber-accent/40;
     transition: all 0.3s ease;
+    flex-shrink: 0;
 }
 
 .project-card:hover .icon-container {
     background: rgba(99, 102, 241, 0.2);
     border-color: var(--cyber-primary);
+    transform: scale(1.1);
 }
 
 /* AI Cards */
@@ -313,8 +315,8 @@ a:focus {
 }
 
 /* Enhanced Typography */
-.font-orbitron {
-    letter-spacing: 0.05em;
+.font-montserrat {
+    letter-spacing: 0.02em;
 }
 
 /* Gradient Text Effect */
