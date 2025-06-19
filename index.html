@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VW ID.4 - La Nueva Era Eléctrica | Campaña IA Generativa</title>
+    <meta name="description" content="Campaña publicitaria conceptual para Volkswagen ID.4 creada con IA Generativa. Descubre la nueva era eléctrica con estética cyber-organic.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'cyber-dark': '#0D0D0D',
+                        'cyber-primary': '#5C4DFF',
+                        'cyber-secondary': '#A863F3',
+                        'cyber-accent': '#F5C169',
+                        'cyber-text': '#EAEAEA',
+                        'cyber-text-secondary': '#A1A1A1'
+                    },
+                    fontFamily: {
+                        'orbitron': ['Orbitron', 'monospace'],
+                        'inter': ['Inter', 'sans-serif']
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'glow': 'glow 2s ease-in-out infinite alternate',
+                        'slide-in': 'slideIn 0.8s ease-out',
+                        'fade-in': 'fadeIn 1s ease-out'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-cyber-dark text-cyber-text font-inter overflow-x-hidden">
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-cyber-dark/80 backdrop-blur-md border-b border-cyber-primary/20">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="font-orbitron font-bold text-xl text-cyber-primary">
+                    VW ID.4
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#concept" class="hover:text-cyber-primary transition-colors duration-300">Concepto</a>
+                    <a href="#project" class="hover:text-cyber-primary transition-colors duration-300">Proyecto</a>
+                    <a href="#visuals" class="hover:text-cyber-primary transition-colors duration-300">Visuales</a>
+                    <a href="#spot" class="hover:text-cyber-primary transition-colors duration-300">Spot</a>
+                    <a href="#contact" class="hover:text-cyber-primary transition-colors duration-300">Contacto</a>
+                </div>
+                <button class="md:hidden text-cyber-primary" id="mobile-menu-button">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 z-40 bg-cyber-dark/95 backdrop-blur-md transform translate-x-full transition-transform duration-300 md:hidden">
+        <div class="flex flex-col items-center justify-center h-full space-y-8 text-2xl">
+            <a href="#concept" class="hover:text-cyber-primary transition-colors duration-300 mobile-nav-item">Concepto</a>
+            <a href="#project" class="hover:text-cyber-primary transition-colors duration-300 mobile-nav-item">Proyecto</a>
+            <a href="#visuals" class="hover:text-cyber-primary transition-colors duration-300 mobile-nav-item">Visuales</a>
+            <a href="#spot" class="hover:text-cyber-primary transition-colors duration-300 mobile-nav-item">Spot</a>
+            <a href="#contact" class="hover:text-cyber-primary transition-colors duration-300 mobile-nav-item">Contacto</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <!-- Animated Background -->
+        <div class="absolute inset-0 z-0">
+            <div class="particles-container"></div>
+            <div class="absolute inset-0 bg-gradient-to-br from-cyber-primary/10 via-transparent to-cyber-secondary/10"></div>
+        </div>
+        
+        <div class="relative z-10 text-center px-6">
+            <!-- VW Logo Animation -->
+            <div class="mb-8 animate-fade-in">
+                <div class="vw-logo mx-auto mb-6 w-24 h-24 border-2 border-cyber-primary rounded-full flex items-center justify-center animate-glow">
+                    <span class="font-orbitron font-bold text-2xl text-cyber-primary">VW</span>
+                </div>
+            </div>
+            
+            <!-- Main Headline -->
+            <h1 class="font-orbitron font-bold text-4xl md:text-7xl lg:text-8xl mb-6 animate-slide-in">
+                <span class="text-cyber-primary">LA NUEVA</span><br>
+                <span class="text-cyber-accent">ERA ELÉCTRICA</span>
+            </h1>
+            
+            <!-- Tagline -->
+            <p class="font-orbitron text-xl md:text-2xl text-cyber-text-secondary mb-8 animate-fade-in" style="animation-delay: 0.5s;">
+                Feel the Shift.
+            </p>
+            
+            <!-- CTA Button -->
+            <button class="cta-button group relative px-8 py-4 font-inter font-semibold text-lg border-2 border-cyber-primary text-cyber-primary rounded-full hover:bg-cyber-primary hover:text-cyber-dark transition-all duration-300 animate-fade-in" style="animation-delay: 1s;" onclick="scrollToSection('concept')">
+                <span class="relative z-10">Iniciar Recorrido</span>
+                <div class="absolute inset-0 rounded-full bg-cyber-primary scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+            </button>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i data-feather="chevron-down" class="text-cyber-primary w-8 h-8"></i>
+        </div>
+    </section>
+
+    <!-- Concept Section -->
+    <section id="concept" class="py-20 relative">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="order-2 lg:order-1">
+                    <h2 class="font-orbitron font-bold text-4xl md:text-5xl mb-6 text-cyber-primary fade-in-on-scroll">
+                        El Concepto
+                    </h2>
+                    <h3 class="font-orbitron text-2xl md:text-3xl mb-8 text-cyber-accent fade-in-on-scroll">
+                        La Nueva Era Eléctrica
+                    </h3>
+                    <p class="text-lg text-cyber-text-secondary mb-8 leading-relaxed fade-in-on-scroll">
+                        Una campaña publicitaria revolucionaria que fusiona la innovación tecnológica del Volkswagen ID.4 
+                        con el poder creativo de la Inteligencia Artificial Generativa. Exploramos una estética cyber-organic 
+                        que conecta la naturaleza con la tecnología, creando una experiencia emocional única que redefine 
+                        el futuro de la movilidad eléctrica.
+                    </p>
+                    <button class="cyber-button fade-in-on-scroll" onclick="scrollToSection('project')">
+                        Ver Proyecto
+                        <i data-feather="arrow-right" class="ml-2 w-5 h-5"></i>
+                    </button>
+                </div>
+                <div class="order-1 lg:order-2 fade-in-on-scroll">
+                    <div class="relative bg-gradient-to-br from-cyber-primary/20 to-cyber-secondary/20 rounded-2xl p-8 backdrop-blur-sm border border-cyber-primary/30">
+                        <!-- Video Background Placeholder -->
+                        <div class="aspect-video bg-cyber-dark rounded-lg flex items-center justify-center border border-cyber-primary/50">
+                            <div class="text-center">
+                                <i data-feather="play-circle" class="w-16 h-16 text-cyber-primary mx-auto mb-4"></i>
+                                <p class="text-cyber-text-secondary">Video Background Loop</p>
+                                <p class="text-sm text-cyber-text-secondary mt-2">assets/concept-video.mp4</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Section -->
+    <section id="project" class="py-20 bg-gradient-to-b from-transparent to-cyber-primary/5">
+        <div class="container mx-auto px-6">
+            <h2 class="font-orbitron font-bold text-4xl md:text-5xl text-center mb-16 text-cyber-primary fade-in-on-scroll">
+                El Proyecto
+            </h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Naming & Creative Strategy -->
+                <div class="project-card group fade-in-on-scroll">
+                    <div class="icon-container">
+                        <i data-feather="lightbulb" class="w-12 h-12 text-cyber-accent"></i>
+                    </div>
+                    <h3 class="font-orbitron font-semibold text-xl mb-4 text-cyber-primary">
+                        Naming & Estrategia Creativa
+                    </h3>
+                    <p class="text-cyber-text-secondary mb-6 leading-relaxed">
+                        Desarrollo de identidad verbal y estrategia creativa basada en insights emocionales 
+                        y tendencias tecnológicas, creando una narrativa coherente y disruptiva.
+                    </p>
+                    <button class="cyber-button-sm" onclick="scrollToSection('naming-details')">
+                        Ver Detalles
+                        <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                    </button>
+                </div>
+                
+                <!-- Visual Storytelling -->
+                <div class="project-card group fade-in-on-scroll" style="animation-delay: 0.2s;">
+                    <div class="icon-container">
+                        <i data-feather="image" class="w-12 h-12 text-cyber-accent"></i>
+                    </div>
+                    <h3 class="font-orbitron font-semibold text-xl mb-4 text-cyber-primary">
+                        Storytelling Visual
+                    </h3>
+                    <p class="text-cyber-text-secondary mb-6 leading-relaxed">
+                        Creación de universo visual mediante IA generativa, desarrollando key visuals 
+                        que conectan emocionalmente con la audiencia a través de estética cyber-organic.
+                    </p>
+                    <button class="cyber-button-sm" onclick="scrollToSection('visuals')">
+                        Ver Detalles
+                        <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                    </button>
+                </div>
+                
+                <!-- Interactive Web Experience -->
+                <div class="project-card group fade-in-on-scroll" style="animation-delay: 0.4s;">
+                    <div class="icon-container">
+                        <i data-feather="monitor" class="w-12 h-12 text-cyber-accent"></i>
+                    </div>
+                    <h3 class="font-orbitron font-semibold text-xl mb-4 text-cyber-primary">
+                        Experiencia Interactiva Web
+                    </h3>
+                    <p class="text-cyber-text-secondary mb-6 leading-relaxed">
+                        Desarrollo de plataforma digital inmersiva que permite a los usuarios 
+                        experimentar el viaje emocional del ID.4 de manera personalizada e interactiva.
+                    </p>
+                    <button class="cyber-button-sm" onclick="scrollToSection('interactive')">
+                        Ver Detalles
+                        <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Visuals Section -->
+    <section id="visuals" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="font-orbitron font-bold text-4xl md:text-5xl text-center mb-4 text-cyber-primary fade-in-on-scroll">
+                Key Visuals
+            </h2>
+            <p class="text-center text-cyber-text-secondary mb-16 fade-in-on-scroll">
+                Imágenes generadas por IA que capturan la esencia de la nueva era eléctrica
+            </p>
+            
+            <!-- Visual Carousel -->
+            <div class="relative fade-in-on-scroll">
+                <div class="carousel-container overflow-hidden rounded-2xl">
+                    <div class="carousel-track flex transition-transform duration-500 ease-in-out" id="visualCarousel">
+                        <!-- Visual 1 -->
+                        <div class="carousel-slide min-w-full relative group cursor-pointer" onclick="openLightbox(0)">
+                            <div class="aspect-video bg-gradient-to-br from-cyber-primary/20 to-cyber-secondary/20 rounded-xl flex items-center justify-center border border-cyber-primary/30">
+                                <div class="text-center">
+                                    <i data-feather="image" class="w-16 h-16 text-cyber-primary mx-auto mb-4"></i>
+                                    <p class="text-cyber-text">Visual Key #1</p>
+                                    <p class="text-sm text-cyber-text-secondary mt-2">Cyber-Organic Landscape</p>
+                                </div>
+                            </div>
+                            <div class="absolute inset-0 bg-cyber-dark/0 group-hover:bg-cyber-dark/20 transition-all duration-300 rounded-xl flex items-center justify-center opacity-0 group-hover:opacity-100">
+                                <div class="text-center text-white">
+                                    <i data-feather="zoom-in" class="w-8 h-8 mx-auto mb-2"></i>
+                                    <p class="text-sm">Ver detalles del prompt</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Visual 2 -->
+                        <div class="carousel-slide min-w-full relative group cursor-pointer" onclick="openLightbox(1)">
+                            <div class="aspect-video bg-gradient-to-br from-cyber-secondary/20 to-cyber-accent/20 rounded-xl flex items-center justify-center border border-cyber-secondary/30">
+                                <div class="text-center">
+                                    <i data-feather="image" class="w-16 h-16 text-cyber-secondary mx-auto mb-4"></i>
+                                    <p class="text-cyber-text">Visual Key #2</p>
+                                    <p class="text-sm text-cyber-text-secondary mt-2">Electric Future Vision</p>
+                                </div>
+                            </div>
+                            <div class="absolute inset-0 bg-cyber-dark/0 group-hover:bg-cyber-dark/20 transition-all duration-300 rounded-xl flex items-center justify-center opacity-0 group-hover:opacity-100">
+                                <div class="text-center text-white">
+                                    <i data-feather="zoom-in" class="w-8 h-8 mx-auto mb-2"></i>
+                                    <p class="text-sm">Ver detalles del prompt</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Visual 3 -->
+                        <div class="carousel-slide min-w-full relative group cursor-pointer" onclick="openLightbox(2)">
+                            <div class="aspect-video bg-gradient-to-br from-cyber-accent/20 to-cyber-primary/20 rounded-xl flex items-center justify-center border border-cyber-accent/30">
+                                <div class="text-center">
+                                    <i data-feather="image" class="w-16 h-16 text-cyber-accent mx-auto mb-4"></i>
+                                    <p class="text-cyber-text">Visual Key #3</p>
+                                    <p class="text-sm text-cyber-text-secondary mt-2">ID.4 Transformation</p>
+                                </div>
+                            </div>
+                            <div class="absolute inset-0 bg-cyber-dark/0 group-hover:bg-cyber-dark/20 transition-all duration-300 rounded-xl flex items-center justify-center opacity-0 group-hover:opacity-100">
+                                <div class="text-center text-white">
+                                    <i data-feather="zoom-in" class="w-8 h-8 mx-auto mb-2"></i>
+                                    <p class="text-sm">Ver detalles del prompt</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Carousel Navigation -->
+                <button class="carousel-btn carousel-prev absolute left-4 top-1/2 transform -translate-y-1/2 bg-cyber-dark/80 hover:bg-cyber-primary text-cyber-primary hover:text-cyber-dark rounded-full p-3 transition-all duration-300" onclick="previousSlide()">
+                    <i data-feather="chevron-left" class="w-6 h-6"></i>
+                </button>
+                <button class="carousel-btn carousel-next absolute right-4 top-1/2 transform -translate-y-1/2 bg-cyber-dark/80 hover:bg-cyber-primary text-cyber-primary hover:text-cyber-dark rounded-full p-3 transition-all duration-300" onclick="nextSlide()">
+                    <i data-feather="chevron-right" class="w-6 h-6"></i>
+                </button>
+                
+                <!-- Carousel Indicators -->
+                <div class="flex justify-center mt-6 space-x-3">
+                    <button class="carousel-indicator active w-3 h-3 rounded-full bg-cyber-primary" onclick="goToSlide(0)"></button>
+                    <button class="carousel-indicator w-3 h-3 rounded-full bg-cyber-text-secondary/50" onclick="goToSlide(1)"></button>
+                    <button class="carousel-indicator w-3 h-3 rounded-full bg-cyber-text-secondary/50" onclick="goToSlide(2)"></button>
+                </div>
+            </div>
+            
+            <!-- CTA -->
+            <div class="text-center mt-12">
+                <button class="cyber-button fade-in-on-scroll" onclick="openAllVisualsModal()">
+                    Ver todos los visuales
+                    <i data-feather="external-link" class="ml-2 w-5 h-5"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advertising Spot Section -->
+    <section id="spot" class="py-20 bg-gradient-to-b from-cyber-primary/5 to-transparent">
+        <div class="container mx-auto px-6">
+            <h2 class="font-orbitron font-bold text-4xl md:text-5xl text-center mb-16 text-cyber-primary fade-in-on-scroll">
+                Spot Publicitario
+            </h2>
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Video Embed -->
+                <div class="fade-in-on-scroll">
+                    <div class="relative bg-cyber-dark rounded-2xl overflow-hidden border border-cyber-primary/30">
+                        <div class="aspect-video bg-gradient-to-br from-cyber-primary/10 to-cyber-secondary/10 flex items-center justify-center">
+                            <div class="text-center">
+                                <i data-feather="play" class="w-20 h-20 text-cyber-primary mx-auto mb-4"></i>
+                                <p class="text-cyber-text text-lg">VEO 2 Generated Spot</p>
+                                <p class="text-cyber-text-secondary text-sm mt-2">assets/vw-id4-spot.mp4</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Technical Details -->
+                <div class="fade-in-on-scroll">
+                    <h3 class="font-orbitron font-semibold text-2xl mb-6 text-cyber-accent">
+                        Detalles Técnicos
+                    </h3>
+                    
+                    <div class="space-y-6">
+                        <div class="p-6 bg-cyber-dark/50 rounded-xl border border-cyber-primary/20">
+                            <h4 class="font-orbitron font-medium text-lg mb-3 text-cyber-primary">Guión Técnico</h4>
+                            <p class="text-cyber-text-secondary">
+                                Narrativa visual de 30 segundos que muestra la transformación del transporte 
+                                tradicional hacia la movilidad eléctrica, utilizando metáforas orgánicas y tecnológicas.
+                            </p>
+                        </div>
+                        
+                        <div class="p-6 bg-cyber-dark/50 rounded-xl border border-cyber-secondary/20">
+                            <h4 class="font-orbitron font-medium text-lg mb-3 text-cyber-secondary">Referencia Visual</h4>
+                            <p class="text-cyber-text-secondary">
+                                Estética cyber-organic inspirada en bioluminiscencia natural, 
+                                arquitectura futurista y elementos de ciencia ficción cinematográfica.
+                            </p>
+                        </div>
+                        
+                        <div class="p-6 bg-cyber-dark/50 rounded-xl border border-cyber-accent/20">
+                            <h4 class="font-orbitron font-medium text-lg mb-3 text-cyber-accent">Prompt Utilizado</h4>
+                            <p class="text-cyber-text-secondary text-sm font-mono">
+                                "Cinematic commercial for electric vehicle, cyber-organic aesthetic, 
+                                bioluminescent elements, futuristic urban landscape, transformation sequence..."
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <button class="cyber-button mt-8">
+                        Descargar Storyboard
+                        <i data-feather="download" class="ml-2 w-5 h-5"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transmedia Activations Section -->
+    <section id="transmedia" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="font-orbitron font-bold text-4xl md:text-5xl text-center mb-16 text-cyber-primary fade-in-on-scroll">
+                Activaciones Transmedia
+            </h2>
+            
+            <!-- Tabs Navigation -->
+            <div class="flex flex-wrap justify-center mb-12 fade-in-on-scroll">
+                <button class="tab-button active px-6 py-3 font-orbitron font-medium mx-2 mb-4 rounded-full border-2 border-cyber-primary text-cyber-primary bg-transparent transition-all duration-300" onclick="switchTab('tv-spot')">
+                    TV Spot
+                </button>
+                <button class="tab-button px-6 py-3 font-orbitron font-medium mx-2 mb-4 rounded-full border-2 border-cyber-text-secondary/50 text-cyber-text-secondary bg-transparent transition-all duration-300" onclick="switchTab('urban-screens')">
+                    Pantallas Urbanas
+                </button>
+                <button class="tab-button px-6 py-3 font-orbitron font-medium mx-2 mb-4 rounded-full border-2 border-cyber-text-secondary/50 text-cyber-text-secondary bg-transparent transition-all duration-300" onclick="switchTab('social-media')">
+                    Redes Sociales
+                </button>
+                <button class="tab-button px-6 py-3 font-orbitron font-medium mx-2 mb-4 rounded-full border-2 border-cyber-text-secondary/50 text-cyber-text-secondary bg-transparent transition-all duration-300" onclick="switchTab('qr-experience')">
+                    QR Experience
+                </button>
+            </div>
+            
+            <!-- Tab Contents -->
+            <div class="tab-contents">
+                <!-- TV Spot Tab -->
+                <div id="tv-spot" class="tab-content active fade-in-on-scroll">
+                    <div class="grid lg:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <h3 class="font-orbitron font-semibold text-3xl mb-6 text-cyber-accent">Spot Televisivo</h3>
+                            <p class="text-cyber-text-secondary mb-6 leading-relaxed">
+                                Adaptación del contenido principal para televisión tradicional y streaming, 
+                                optimizado para diferentes formatos y audiencias, manteniendo la coherencia 
+                                narrativa y visual de la campaña.
+                            </p>
+                            <div class="bg-cyber-dark/50 p-6 rounded-xl border border-cyber-primary/20 mb-6">
+                                <h4 class="font-orbitron font-medium text-cyber-primary mb-3">Racional Estratégico</h4>
+                                <p class="text-cyber-text-secondary text-sm">
+                                    Maximizar el alcance en medios tradicionales mientras se introduce 
+                                    el concepto de movilidad eléctrica a audiencias masivas con un mensaje 
+                                    aspiracional y emocionalmente resonante.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="aspect-video bg-gradient-to-br from-cyber-primary/20 to-cyber-secondary/20 rounded-xl flex items-center justify-center border border-cyber-primary/30">
+                            <div class="text-center">
+                                <i data-feather="tv" class="w-16 h-16 text-cyber-primary mx-auto mb-4"></i>
+                                <p class="text-cyber-text">TV Spot Mockup</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Urban Screens Tab -->
+                <div id="urban-screens" class="tab-content hidden">
+                    <div class="grid lg:grid-cols-2 gap-12 items-center">
+                        <div class="order-2 lg:order-1">
+                            <div class="aspect-video bg-gradient-to-br from-cyber-secondary/20 to-cyber-accent/20 rounded-xl flex items-center justify-center border border-cyber-secondary/30">
+                                <div class="text-center">
+                                    <i data-feather="monitor" class="w-16 h-16 text-cyber-secondary mx-auto mb-4"></i>
+                                    <p class="text-cyber-text">Urban LED Mockup</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-1 lg:order-2">
+                            <h3 class="font-orbitron font-semibold text-3xl mb-6 text-cyber-accent">Pantallas LED Urbanas</h3>
+                            <p class="text-cyber-text-secondary mb-6 leading-relaxed">
+                                Activaciones en pantallas LED de gran formato en zonas urbanas estratégicas, 
+                                creando momentos de impacto visual que conecten con la audiencia en su entorno cotidiano.
+                            </p>
+                            <div class="bg-cyber-dark/50 p-6 rounded-xl border border-cyber-secondary/20">
+                                <h4 class="font-orbitron font-medium text-cyber-secondary mb-3">Estrategia de Ubicación</h4>
+                                <p class="text-cyber-text-secondary text-sm">
+                                    Selección de ubicaciones premium en centros urbanos con alta circulación 
+                                    de nuestro target, maximizando la visibilidad y el recall de marca.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Social Media Tab -->
+                <div id="social-media" class="tab-content hidden">
+                    <div class="grid lg:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <h3 class="font-orbitron font-semibold text-3xl mb-6 text-cyber-accent">Redes Sociales</h3>
+                            <p class="text-cyber-text-secondary mb-6 leading-relaxed">
+                                Contenido adaptado para Instagram Reels, TikTok y YouTube Shorts, 
+                                aprovechando las dinámicas nativas de cada plataforma para maximizar 
+                                el engagement y la viralidad.
+                            </p>
+                            <div class="grid grid-cols-2 gap-4 mb-6">
+                                <div class="bg-cyber-dark/50 p-4 rounded-lg border border-cyber-accent/20 text-center">
+                                    <i data-feather="instagram" class="w-8 h-8 text-cyber-accent mx-auto mb-2"></i>
+                                    <p class="text-sm text-cyber-text">Instagram Reels</p>
+                                </div>
+                                <div class="bg-cyber-dark/50 p-4 rounded-lg border border-cyber-accent/20 text-center">
+                                    <i data-feather="youtube" class="w-8 h-8 text-cyber-accent mx-auto mb-2"></i>
+                                    <p class="text-sm text-cyber-text">YouTube Shorts</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="aspect-square bg-gradient-to-br from-cyber-accent/20 to-cyber-primary/20 rounded-xl flex items-center justify-center border border-cyber-accent/30">
+                                <div class="text-center">
+                                    <i data-feather="smartphone" class="w-8 h-8 text-cyber-accent mx-auto mb-2"></i>
+                                    <p class="text-xs text-cyber-text">Reel 1</p>
+                                </div>
+                            </div>
+                            <div class="aspect-square bg-gradient-to-br from-cyber-primary/20 to-cyber-secondary/20 rounded-xl flex items-center justify-center border border-cyber-primary/30">
+                                <div class="text-center">
+                                    <i data-feather="smartphone" class="w-8 h-8 text-cyber-primary mx-auto mb-2"></i>
+                                    <p class="text-xs text-cyber-text">Reel 2</p>
+                                </div>
+                            </div>
+                            <div class="aspect-square bg-gradient-to-br from-cyber-secondary/20 to-cyber-accent/20 rounded-xl flex items-center justify-center border border-cyber-secondary/30">
+                                <div class="text-center">
+                                    <i data-feather="smartphone" class="w-8 h-8 text-cyber-secondary mx-auto mb-2"></i>
+                                    <p class="text-xs text-cyber-text">TikTok</p>
+                                </div>
+                            </div>
+                            <div class="aspect-square bg-gradient-to-br from-cyber-accent/20 to-cyber-primary/20 rounded-xl flex items-center justify-center border border-cyber-accent/30">
+                                <div class="text-center">
+                                    <i data-feather="smartphone" class="w-8 h-8 text-cyber-accent mx-auto mb-2"></i>
+                                    <p class="text-xs text-cyber-text">Story</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- QR Experience Tab -->
+                <div id="qr-experience" class="tab-content hidden">
+                    <div class="grid lg:grid-cols-2 gap-12 items-center">
+                        <div class="order-2 lg:order-1">
+                            <div class="aspect-video bg-gradient-to-br from-cyber-accent/20 to-cyber-primary/20 rounded-xl flex items-center justify-center border border-cyber-accent/30">
+                                <div class="text-center">
+                                    <div class="w-32 h-32 bg-cyber-dark rounded-lg flex items-center justify-center border-2 border-cyber-accent mb-4 mx-auto">
+                                        <i data-feather="square" class="w-16 h-16 text-cyber-accent"></i>
+                                    </div>
+                                    <p class="text-cyber-text">QR Interactive Experience</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-1 lg:order-2">
+                            <h3 class="font-orbitron font-semibold text-3xl mb-6 text-cyber-accent">QR Experience</h3>
+                            <p class="text-cyber-text-secondary mb-6 leading-relaxed">
+                                Experiencia inmersiva activada por código QR que permite a los usuarios 
+                                explorar el ID.4 en realidad aumentada y acceder a contenido exclusivo 
+                                personalizado según sus preferencias.
+                            </p>
+                            <div class="bg-cyber-dark/50 p-6 rounded-xl border border-cyber-accent/20">
+                                <h4 class="font-orbitron font-medium text-cyber-accent mb-3">Funcionalidades</h4>
+                                <ul class="text-cyber-text-secondary text-sm space-y-2">
+                                    <li>• Visualización AR del vehículo</li>
+                                    <li>• Configurador interactivo</li>
+                                    <li>• Test drive virtual</li>
+                                    <li>• Calculadora de beneficios eléctricos</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Web Experience Section -->
+    <section id="interactive" class="py-20 bg-gradient-to-b from-transparent to-cyber-secondary/5">
+        <div class="container mx-auto px-6">
+            <h2 class="font-orbitron font-bold text-4xl md:text-5xl text-center mb-16 text-cyber-primary fade-in-on-scroll">
+                Web Interactiva ID.4
+            </h2>
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="fade-in-on-scroll">
+                    <h3 class="font-orbitron font-semibold text-3xl mb-6 text-cyber-accent">
+                        Experiencia Inmersiva
+                    </h3>
+                    <p class="text-cyber-text-secondary mb-8 leading-relaxed">
+                        Plataforma web que permite a los usuarios vivir un viaje emocional personalizado 
+                        con el Volkswagen ID.4, explorando sus características técnicas, beneficios ambientales 
+                        y el futuro de la movilidad eléctrica a través de interacciones intuitivas y narrativa adaptativa.
+                    </p>
+                    
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center space-x-3">
+                            <i data-feather="check-circle" class="w-5 h-5 text-cyber-accent"></i>
+                            <span class="text-cyber-text">Configurador 3D interactivo</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i data-feather="check-circle" class="w-5 h-5 text-cyber-accent"></i>
+                            <span class="text-cyber-text">Simulador de rutas eléctricas</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i data-feather="check-circle" class="w-5 h-5 text-cyber-accent"></i>
+                            <span class="text-cyber-text">Calculadora de impacto ambiental</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i data-feather="check-circle" class="w-5 h-5 text-cyber-accent"></i>
+                            <span class="text-cyber-text">Test drive virtual inmersivo</span>
+                        </div>
+                    </div>
+                    
+                    <button class="cyber-button" onclick="openInteractivePreview()">
+                        Probar Experiencia
+                        <i data-feather="external-link" class="ml-2 w-5 h-5"></i>
+                    </button>
+                </div>
+                
+                <div class="fade-in-on-scroll">
+                    <div class="relative bg-cyber-dark rounded-2xl overflow-hidden border border-cyber-secondary/30">
+                        <div class="aspect-video bg-gradient-to-br from-cyber-secondary/10 to-cyber-accent/10 flex items-center justify-center">
+                            <div class="text-center">
+                                <i data-feather="globe" class="w-20 h-20 text-cyber-secondary mx-auto mb-4"></i>
+                                <p class="text-cyber-text text-lg">Web Experience Preview</p>
+                                <p class="text-cyber-text-secondary text-sm mt-2">assets/web-experience-mockup.mp4</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Mockup Overlay -->
+                        <div class="absolute inset-4 grid grid-cols-3 gap-2">
+                            <div class="bg-cyber-primary/20 rounded"></div>
+                            <div class="bg-cyber-secondary/20 rounded"></div>
+                            <div class="bg-cyber-accent/20 rounded"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Team Section -->
+    <section id="ai-team" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="font-orbitron font-bold text-4xl md:text-5xl text-center mb-16 text-cyber-primary fade-in-on-scroll">
+                El Equipo IA
+            </h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- ChatGPT Card -->
+                <div class="ai-card group fade-in-on-scroll">
+                    <div class="ai-icon-container">
+                        <i data-feather="message-circle" class="w-8 h-8 text-cyber-primary"></i>
+                    </div>
+                    <h3 class="font-orbitron font-semibold text-lg mb-2 text-cyber-primary">ChatGPT</h3>
+                    <p class="text-cyber-text-secondary text-sm mb-4">Estrategia & Naming</p>
+                    <div class="ai-details opacity-0 group-hover:opacity-100 transition-all duration-300">
+                        <p class="text-xs text-cyber-text-secondary mb-2">
+                            Desarrollo de estrategia creativa, naming y conceptualización narrativa
+                        </p>
+                        <div class="text-xs text-cyber-accent">
+                            Prompt: "Crea una estrategia de naming..."
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Gemini Card -->
+                <div class="ai-card group fade-in-on-scroll" style="animation-delay: 0.1s;">
+                    <div class="ai-icon-container">
+                        <i data-feather="star" class="w-8 h-8 text-cyber-secondary"></i>
+                    </div>
+                    <h3 class="font-orbitron font-semibold text-lg mb-2 text-cyber-secondary">Gemini</h3>
+                    <p class="text-cyber-text-secondary text-sm mb-4">Análisis & Insights</p>
+                    <div class="ai-details opacity-0 group-hover:opacity-100 transition-all duration-300">
+                        <p class="text-xs text-cyber-text-secondary mb-2">
+                            Análisis de tendencias, insights de audiencia y optimización de contenido
+                        </p>
+                        <div class="text-xs text-cyber-secondary">
+                            Prompt: "Analiza las tendencias en movilidad..."
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- VEO2 Card -->
+                <div class="ai-card group fade-in-on-scroll" style="animation-delay: 0.2s;">
+                    <div class="ai-icon-container">
+                        <i data-feather="video" class="w-8 h-8 text-cyber-accent"></i>
+                    </div>
+                    <h3 class="font-orbitron font-semibold text-lg mb-2 text-cyber-accent">VEO 2</h3>
+                    <p class="text-cyber-text-secondary text-sm mb-4">Video Generativo</p>
+                    <div class="ai-details opacity-0 group-hover:opacity-100 transition-all duration-300">
+                        <p class="text-xs text-cyber-text-secondary mb-2">
+                            Generación de spots publicitarios y contenido audiovisual
+                        </p>
+                        <div class="text-xs text-cyber-accent">
+                            Prompt: "Cinematic commercial for electric vehicle..."
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Midjourney Card -->
+                <div class="ai-card group fade-in-on-scroll" style="animation-delay: 0.3s;">
+                    <div class="ai-icon-container">
+                        <i data-feather="image" class="w-8 h-8 text-cyber-primary"></i>
+                    </div>
+                    <h3 class="font-orbitron font-semibold text-lg mb-2 text-cyber-primary">Midjourney</h3>
+                    <p class="text-cyber-text-secondary text-sm mb-4">Key Visuals</p>
+                    <div class="ai-details opacity-0 group-hover:opacity-100 transition-all duration-300">
+                        <p class="text-xs text-cyber-text-secondary mb-2">
+                            Creación de key visuals y elementos gráficos cyber-organic
+                        </p>
+                        <div class="text-xs text-cyber-primary">
+                            Prompt: "Cyber-organic landscape with electric vehicle..."
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gradient-to-b from-cyber-primary/5 to-cyber-dark">
+        <div class="container mx-auto px-6">
+            <div class="text-center fade-in-on-scroll">
+                <h2 class="font-orbitron font-bold text-4xl md:text-5xl mb-8 text-cyber-primary">
+                    Construyamos el Futuro Juntos
+                </h2>
+                <p class="text-xl text-cyber-text-secondary mb-12 max-w-3xl mx-auto leading-relaxed">
+                    ¿Listo para revolucionar tu marca con el poder de la IA Generativa? 
+                    Exploremos cómo podemos crear experiencias extraordinarias que conecten 
+                    emocionalmente con tu audiencia.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                    <button class="cta-button group relative px-8 py-4 font-orbitron font-semibold text-lg border-2 border-cyber-primary text-cyber-primary rounded-full hover:bg-cyber-primary hover:text-cyber-dark transition-all duration-300">
+                        <span class="relative z-10">Solicitar Demo</span>
+                        <div class="absolute inset-0 rounded-full bg-cyber-primary scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+                        <i data-feather="calendar" class="ml-2 w-5 h-5 relative z-10"></i>
+                    </button>
+                    
+                    <button class="cyber-button-outline">
+                        Agendar Reunión
+                        <i data-feather="phone" class="ml-2 w-5 h-5"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-cyber-dark border-t border-cyber-primary/20 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="font-orbitron font-bold text-xl text-cyber-primary mb-4">VW ID.4</h3>
+                    <p class="text-cyber-text-secondary">
+                        Campaña conceptual desarrollada con IA Generativa para demostrar 
+                        el futuro de la creatividad publicitaria.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-orbitron font-semibold text-cyber-accent mb-4">Tecnologías IA</h4>
+                    <ul class="space-y-2 text-cyber-text-secondary">
+                        <li>ChatGPT - Estrategia</li>
+                        <li>Gemini - Análisis</li>
+                        <li>VEO 2 - Video</li>
+                        <li>Midjourney - Visuales</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-orbitron font-semibold text-cyber-accent mb-4">Conecta</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-cyber-text-secondary hover:text-cyber-primary transition-colors duration-300">
+                            <i data-feather="linkedin" class="w-6 h-6"></i>
+                        </a>
+                        <a href="#" class="text-cyber-text-secondary hover:text-cyber-primary transition-colors duration-300">
+                            <i data-feather="twitter" class="w-6 h-6"></i>
+                        </a>
+                        <a href="#" class="text-cyber-text-secondary hover:text-cyber-primary transition-colors duration-300">
+                            <i data-feather="instagram" class="w-6 h-6"></i>
+                        </a>
+                        <a href="#" class="text-cyber-text-secondary hover:text-cyber-primary transition-colors duration-300">
+                            <i data-feather="youtube" class="w-6 h-6"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-cyber-primary/20 pt-8 text-center text-cyber-text-secondary">
+                <p>&copy; 2024 VW ID.4 - La Nueva Era Eléctrica. Campaña conceptual creada con IA Generativa.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 z-50 bg-cyber-dark/95 backdrop-blur-lg hidden flex items-center justify-center p-4">
+        <div class="relative max-w-4xl w-full">
+            <button class="absolute -top-12 right-0 text-cyber-primary hover:text-cyber-accent transition-colors duration-300" onclick="closeLightbox()">
+                <i data-feather="x" class="w-8 h-8"></i>
+            </button>
+            <div id="lightbox-content" class="bg-cyber-dark rounded-2xl overflow-hidden border border-cyber-primary/30">
+                <!-- Content will be dynamically loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        // Initialize Feather Icons
+        feather.replace();
+    </script>
+</body>
+</html>

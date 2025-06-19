@@ -1,0 +1,327 @@
+/* Custom CSS for animations and additional styling */
+
+/* CSS Variables for consistent theming */
+:root {
+    --cyber-dark: #0D0D0D;
+    --cyber-primary: #5C4DFF;
+    --cyber-secondary: #A863F3;
+    --cyber-accent: #F5C169;
+    --cyber-text: #EAEAEA;
+    --cyber-text-secondary: #A1A1A1;
+}
+
+/* Custom Animations */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes glow {
+    0% { box-shadow: 0 0 20px var(--cyber-primary); }
+    100% { box-shadow: 0 0 30px var(--cyber-primary), 0 0 40px var(--cyber-primary); }
+}
+
+@keyframes slideIn {
+    0% { 
+        opacity: 0; 
+        transform: translateY(50px); 
+    }
+    100% { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* Smooth scrolling behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--cyber-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--cyber-primary);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--cyber-secondary);
+}
+
+/* Particle Animation Background */
+.particles-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.particles-container::before,
+.particles-container::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: var(--cyber-primary);
+    border-radius: 50%;
+    animation: float 8s ease-in-out infinite;
+}
+
+.particles-container::before {
+    top: 20%;
+    left: 20%;
+    animation-delay: -2s;
+}
+
+.particles-container::after {
+    top: 60%;
+    right: 30%;
+    animation-delay: -4s;
+    background: var(--cyber-accent);
+}
+
+/* VW Logo Animation */
+.vw-logo {
+    transition: all 0.3s ease;
+}
+
+.vw-logo:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Custom Button Styles */
+.cyber-button {
+    @apply inline-flex items-center px-8 py-4 font-inter font-semibold text-lg border-2 border-cyber-primary text-cyber-primary rounded-full hover:bg-cyber-primary hover:text-cyber-dark transition-all duration-300 relative overflow-hidden;
+}
+
+.cyber-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+
+.cyber-button:hover::before {
+    left: 100%;
+}
+
+.cyber-button-sm {
+    @apply inline-flex items-center px-6 py-3 font-inter font-medium text-sm border border-cyber-primary text-cyber-primary rounded-full hover:bg-cyber-primary hover:text-cyber-dark transition-all duration-300;
+}
+
+.cyber-button-outline {
+    @apply inline-flex items-center px-8 py-4 font-orbitron font-semibold text-lg border-2 border-cyber-accent text-cyber-accent rounded-full hover:bg-cyber-accent hover:text-cyber-dark transition-all duration-300;
+}
+
+/* Project Cards */
+.project-card {
+    @apply p-8 bg-cyber-dark/30 rounded-2xl border border-cyber-primary/20 hover:border-cyber-primary/50 transition-all duration-300 backdrop-blur-sm;
+    backdrop-filter: blur(10px);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(92, 77, 255, 0.1);
+}
+
+.icon-container {
+    @apply w-16 h-16 bg-cyber-dark rounded-xl flex items-center justify-center mb-6 border border-cyber-accent/30;
+}
+
+/* AI Cards */
+.ai-card {
+    @apply p-6 bg-cyber-dark/50 rounded-xl border border-cyber-primary/20 hover:border-cyber-primary/50 transition-all duration-300 text-center relative overflow-hidden;
+    min-height: 200px;
+}
+
+.ai-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(92, 77, 255, 0.1);
+}
+
+.ai-icon-container {
+    @apply w-16 h-16 bg-cyber-dark rounded-lg flex items-center justify-center mx-auto mb-4 border border-cyber-primary/30;
+}
+
+.ai-details {
+    @apply absolute inset-x-4 bottom-4 p-3 bg-cyber-dark/90 rounded-lg border border-cyber-primary/30;
+}
+
+/* Carousel Styles */
+.carousel-container {
+    position: relative;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    flex-shrink: 0;
+}
+
+.carousel-btn {
+    backdrop-filter: blur(10px);
+}
+
+.carousel-indicator {
+    transition: all 0.3s ease;
+}
+
+.carousel-indicator.active {
+    background-color: var(--cyber-primary);
+}
+
+/* Tab Styles */
+.tab-button {
+    transition: all 0.3s ease;
+}
+
+.tab-button.active {
+    background-color: var(--cyber-primary);
+    color: var(--cyber-dark);
+    border-color: var(--cyber-primary);
+}
+
+.tab-button:hover:not(.active) {
+    border-color: var(--cyber-primary);
+    color: var(--cyber-primary);
+}
+
+.tab-content {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.tab-content.hidden {
+    display: none;
+}
+
+/* Fade-in on scroll animation */
+.fade-in-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Mobile Menu Styles */
+.mobile-nav-item {
+    transition: all 0.3s ease;
+}
+
+.mobile-nav-item:hover {
+    transform: scale(1.1);
+}
+
+/* Lightbox Styles */
+#lightbox {
+    backdrop-filter: blur(20px);
+}
+
+/* Responsive Design Enhancements */
+@media (max-width: 768px) {
+    .vw-logo {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .project-card {
+        padding: 1.5rem;
+    }
+    
+    .ai-card {
+        min-height: 150px;
+        padding: 1rem;
+    }
+    
+    .carousel-btn {
+        display: none;
+    }
+}
+
+/* Hover Effects for Interactive Elements */
+.hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(92, 77, 255, 0.2);
+}
+
+/* Loading Animation */
+.loading {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* Enhanced Focus States */
+button:focus,
+a:focus {
+    outline: 2px solid var(--cyber-primary);
+    outline-offset: 2px;
+}
+
+/* Glass Morphism Effect */
+.glass-morphism {
+    background: rgba(92, 77, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(92, 77, 255, 0.2);
+}
+
+/* Enhanced Typography */
+.font-orbitron {
+    letter-spacing: 0.05em;
+}
+
+/* Gradient Text Effect */
+.gradient-text {
+    background: linear-gradient(135deg, var(--cyber-primary), var(--cyber-secondary), var(--cyber-accent));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Image Placeholder Styles */
+.image-placeholder {
+    background: linear-gradient(135deg, rgba(92, 77, 255, 0.1), rgba(168, 99, 243, 0.1));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cyber-text-secondary);
+    border: 1px dashed rgba(92, 77, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.image-placeholder:hover {
+    border-color: var(--cyber-primary);
+    background: rgba(92, 77, 255, 0.05);
+}
