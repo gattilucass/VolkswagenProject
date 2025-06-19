@@ -812,7 +812,170 @@
     <section id="contact" class="py-20 bg-gradient-to-b from-cyber-primary/5 to-cyber-dark">
         <div class="container mx-auto px-6">
             <div class="text-center fade-in-on-scroll">
-                <h2 class="font-orbitron font-bold text-4xl md:text-5xl mb-8 text-cyber-primary">
+                <h2 class="font-orbitron font-bold text-4xl md:text-5xl mb-8 text-cyber-primary">Contacto</h2>
+                <p class="text-xl text-cyber-text-secondary mb-12 max-w-3xl mx-auto">
+                    ¿Interesado en implementar campañas innovadoras con IA? Conectemos y exploremos las posibilidades del futuro publicitario.
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-start">
+                <!-- Contact Form -->
+                <div class="fade-in-on-scroll">
+                    <form onsubmit="handleContactForm(event)" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-cyber-text font-medium mb-2">Nombre *</label>
+                                <input type="text" id="name" name="name" required
+                                    class="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/40 rounded-lg text-cyber-text focus:border-cyber-primary focus:outline-none transition-colors">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-cyber-text font-medium mb-2">Email *</label>
+                                <input type="email" id="email" name="email" required
+                                    class="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/40 rounded-lg text-cyber-text focus:border-cyber-primary focus:outline-none transition-colors">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label for="company" class="block text-cyber-text font-medium mb-2">Empresa</label>
+                            <input type="text" id="company" name="company"
+                                class="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/40 rounded-lg text-cyber-text focus:border-cyber-primary focus:outline-none transition-colors">
+                        </div>
+                        
+                        <div>
+                            <label for="interest_level" class="block text-cyber-text font-medium mb-2">Nivel de Interés</label>
+                            <select id="interest_level" name="interest_level"
+                                class="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/40 rounded-lg text-cyber-text focus:border-cyber-primary focus:outline-none transition-colors">
+                                <option value="consultation">Consultoría</option>
+                                <option value="campaign">Campaña Completa</option>
+                                <option value="workshop">Workshop IA</option>
+                                <option value="demo">Demo Técnica</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-cyber-text font-medium mb-2">Mensaje *</label>
+                            <textarea id="message" name="message" rows="4" required
+                                class="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/40 rounded-lg text-cyber-text focus:border-cyber-primary focus:outline-none transition-colors resize-none"
+                                placeholder="Cuéntanos sobre tu proyecto o necesidades..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="cyber-button w-full justify-center">
+                            Enviar Mensaje
+                            <i data-feather="send" class="ml-2 w-5 h-5"></i>
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="fade-in-on-scroll">
+                    <div class="bg-gray-800/40 p-8 rounded-xl border border-gray-600/40">
+                        <h3 class="font-orbitron font-semibold text-2xl mb-6 text-cyber-accent">Hablemos del Futuro</h3>
+                        <p class="text-cyber-text-secondary mb-8 leading-relaxed">
+                            Este proyecto demuestra el poder transformador de la IA en la publicidad. 
+                            Desde la estrategia hasta la ejecución, cada elemento fue creado con herramientas de inteligencia artificial.
+                        </p>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <i data-feather="zap" class="w-6 h-6 text-cyber-primary mt-1"></i>
+                                <div>
+                                    <h4 class="font-medium text-cyber-text mb-1">Innovación IA</h4>
+                                    <p class="text-cyber-text-secondary text-sm">Campañas 100% generadas con inteligencia artificial</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <i data-feather="target" class="w-6 h-6 text-cyber-secondary mt-1"></i>
+                                <div>
+                                    <h4 class="font-medium text-cyber-text mb-1">Resultados Medibles</h4>
+                                    <p class="text-cyber-text-secondary text-sm">Analytics avanzados y optimización continua</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <i data-feather="users" class="w-6 h-6 text-cyber-accent mt-1"></i>
+                                <div>
+                                    <h4 class="font-medium text-cyber-text mb-1">Experiencia Personalizada</h4>
+                                    <p class="text-cyber-text-secondary text-sm">Contenido adaptado a cada audiencia</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8 pt-6 border-t border-gray-600/40">
+                            <p class="text-cyber-text-secondary text-sm text-center">
+                                <i data-feather="database" class="w-4 h-4 inline mr-2"></i>
+                                Datos seguros con PostgreSQL
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-cyber-dark border-t border-gray-600/40">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8 text-center md:text-left">
+                <div>
+                    <div class="flex items-center justify-center md:justify-start mb-4">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Volkswagen_logo_2019.svg/1024px-Volkswagen_logo_2019.svg.png" 
+                             alt="Volkswagen Logo" 
+                             class="w-8 h-8 filter brightness-0 invert mr-3">
+                        <span class="font-orbitron font-bold text-xl text-cyber-primary">ID.4 Campaign</span>
+                    </div>
+                    <p class="text-cyber-text-secondary text-sm">
+                        Campaña conceptual creada con IA Generativa para demostrar el futuro de la publicidad automotriz.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-orbitron font-semibold mb-4 text-cyber-text">Herramientas IA</h4>
+                    <ul class="space-y-2 text-cyber-text-secondary text-sm">
+                        <li>ChatGPT - Estrategia</li>
+                        <li>Midjourney - Visuales</li>
+                        <li>VEO 2 - Video</li>
+                        <li>Gemini - Analytics</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-orbitron font-semibold mb-4 text-cyber-text">Enlaces</h4>
+                    <div class="space-y-2">
+                        <a href="/admin/dashboard" class="block text-cyber-text-secondary text-sm hover:text-cyber-primary transition-colors">
+                            Dashboard Analytics
+                        </a>
+                        <a href="/api/health" class="block text-cyber-text-secondary text-sm hover:text-cyber-primary transition-colors">
+                            API Status
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-600/40 mt-8 pt-8 text-center">
+                <p class="text-cyber-text-secondary text-sm">
+                    © 2025 VW ID.4 "La Nueva Era Eléctrica" - Proyecto Conceptual de IA Generativa
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 z-50 bg-cyber-dark/90 backdrop-blur-md flex items-center justify-center p-6 hidden">
+        <div class="bg-gray-800 rounded-2xl max-w-6xl w-full max-h-[90vh] overflow-y-auto relative">
+            <button onclick="closeLightbox()" class="absolute top-4 right-4 z-10 p-2 bg-cyber-dark/80 rounded-full text-cyber-text hover:text-cyber-primary transition-colors">
+                <i data-feather="x" class="w-6 h-6"></i>
+            </button>
+            <div id="lightbox-content">
+                <!-- Dynamic content will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
                     Construyamos el Futuro Juntos
                 </h2>
                 <p class="text-xl text-cyber-text-secondary mb-12 max-w-3xl mx-auto leading-relaxed">

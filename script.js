@@ -4,6 +4,12 @@
 let currentSlide = 0;
 const totalSlides = 3;
 let isScrolling = false;
+let sessionId = generateSessionId();
+
+// Generate unique session ID
+function generateSessionId() {
+    return 'session_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+}
 
 // DOM Content Loaded Event
 document.addEventListener('DOMContentLoaded', function() {
@@ -14,6 +20,13 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeTabs();
     initializeSmoothScrolling();
     createParticles();
+    
+    // Track page load
+    trackEvent('page_loaded', { 
+        section: 'hero',
+        user_agent: navigator.userAgent,
+        screen_resolution: `${window.screen.width}x${window.screen.height}`
+    });
 });
 
 // Initialize Feather Icons
@@ -94,6 +107,12 @@ function scrollToSection(sectionId) {
         element.scrollIntoView({
             behavior: 'smooth',
             block: 'start'
+        });
+        
+        // Track section navigation
+        trackEvent('section_navigation', { 
+            section: sectionId,
+            from_section: 'navigation'
         });
     }
 }
@@ -192,8 +211,16 @@ function openLightbox(visualIndex) {
     const lightboxContent = document.getElementById('lightbox-content');
     
     if (lightbox && lightboxContent) {
-        // Create content based on visual index
+        // Track visual view
         const visualData = getVisualData(visualIndex);
+        trackVisualView(visualIndex, visualData.title);
+        trackEvent('lightbox_opened', { 
+            section: 'visuals', 
+            visual_index: visualIndex,
+            visual_title: visualData.title 
+        });
+        
+        // Create content based on visual index
         
         lightboxContent.innerHTML = `
             <div class="p-8">
@@ -400,17 +427,78 @@ const imageObserver = new IntersectionObserver((entries, observer) => {
 
 lazyImages.forEach(img => imageObserver.observe(img));
 
-// Analytics and Tracking (placeholder)
+// Analytics and Tracking
 function trackEvent(eventName, properties = {}) {
     console.log('Event tracked:', eventName, properties);
-    // Implement actual analytics tracking here
+    
+    // Send to backend
+    fetch('/api/track-interaction', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            session_id: sessionId,
+            type: eventName,
+            section: properties.section || 'unknown',
+            data: properties
+        })
+    }).catch(error => {
+        console.error('Error tracking event:', error);
+    });
 }
 
-// Contact Form Handling (if added later)
+// Visual view tracking
+function trackVisualView(visualId, visualName) {
+    fetch('/api/track-visual-view', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            session_id: sessionId,
+            visual_id: visualId,
+            visual_name: visualName
+        })
+    }).catch(error => {
+        console.error('Error tracking visual view:', error);
+    });
+}
+
+// Contact Form Handling
 function handleContactForm(event) {
     event.preventDefault();
-    // Implement form submission logic
-    trackEvent('contact_form_submitted');
+    
+    const formData = new FormData(event.target);
+    const data = {
+        name: formData.get('name'),
+        email: formData.get('email'),
+        company: formData.get('company'),
+        message: formData.get('message'),
+        interest_level: formData.get('interest_level')
+    };
+    
+    fetch('/api/submit-contact', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data)
+    })
+    .then(response => response.json())
+    .then(result => {
+        if (result.status === 'success') {
+            alert('¡Gracias por tu interés! Nos pondremos en contacto contigo pronto.');
+            event.target.reset();
+            trackEvent('contact_form_submitted', { section: 'contact' });
+        } else {
+            alert('Error al enviar el formulario. Por favor, inténtalo de nuevo.');
+        }
+    })
+    .catch(error => {
+        console.error('Error submitting form:', error);
+        alert('Error al enviar el formulario. Por favor, inténtalo de nuevo.');
+    });
 }
 
 // Accessibility Enhancements
