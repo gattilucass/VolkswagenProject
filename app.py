@@ -113,6 +113,32 @@ def serve_website():
     except FileNotFoundError:
         return "Website not found", 404
 
+@app.route('/styles.css')
+def serve_styles():
+    """Serve the CSS file"""
+    try:
+        with open('styles.css', 'r', encoding='utf-8') as f:
+            response = app.response_class(
+                f.read(),
+                mimetype='text/css'
+            )
+            return response
+    except FileNotFoundError:
+        return "CSS not found", 404
+
+@app.route('/script.js')
+def serve_script():
+    """Serve the JavaScript file"""
+    try:
+        with open('script.js', 'r', encoding='utf-8') as f:
+            response = app.response_class(
+                f.read(),
+                mimetype='application/javascript'
+            )
+            return response
+    except FileNotFoundError:
+        return "Script not found", 404
+
 @app.route('/api/track-interaction', methods=['POST'])
 def track_interaction():
     """Track user interactions with the campaign"""

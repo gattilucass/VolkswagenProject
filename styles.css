@@ -5,7 +5,7 @@
     --cyber-dark: #111827;
     --cyber-primary: #6366F1;
     --cyber-secondary: #818CF8;
-    --cyber-accent: #F59E0B;
+    --cyber-accent: #FFFFFF;
     --cyber-text: #F9FAFB;
     --cyber-text-secondary: #D1D5DB;
 }
@@ -149,7 +149,7 @@ html {
 }
 
 .icon-container {
-    @apply w-16 h-16 bg-gray-900 rounded-xl flex items-center justify-center mb-6 border border-cyber-accent/40;
+    @apply w-16 h-16 bg-gray-900 rounded-xl flex items-center justify-center mb-6 border border-gray-600/40;
     transition: all 0.3s ease;
     flex-shrink: 0;
 }
@@ -317,6 +317,35 @@ a:focus {
 /* Enhanced Typography */
 .font-montserrat {
     letter-spacing: 0.02em;
+}
+
+/* Section Title Styling */
+.section-title {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--cyber-primary), var(--cyber-secondary));
+    border-radius: 2px;
+}
+
+h2.section-title::after {
+    width: 80px;
+    height: 4px;
+}
+
+/* Main section headers styling */
+h2 {
+    text-shadow: 0 2px 10px rgba(99, 102, 241, 0.3);
 }
 
 /* Gradient Text Effect */
