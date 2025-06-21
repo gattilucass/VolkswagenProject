@@ -19,8 +19,11 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeCarousel();
     initializeTabs();
     initializeSmoothScrolling();
+    initializeBackgroundScroll();
     createParticles();
-    
+      initializeMouseAura();
+      initializeIntroSequence();
+
     // Track page load
     trackEvent('page_loaded', { 
         section: 'hero',
@@ -99,6 +102,31 @@ function initializeSmoothScrolling() {
         });
     });
 }
+
+// === NUEVA FUNCIÓN PARA FONDO ANIMADO CON SCROLL ===
+function initializeBackgroundScroll() {
+    const sections = document.querySelectorAll('section[data-bg-color]');
+    const body = document.body;
+    let initialColor = '#111827'; // Color base del body
+
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.4 // Se activa cuando el 40% de la sección es visible
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const color = entry.target.getAttribute('data-bg-color');
+                body.style.backgroundColor = color;
+            }
+        });
+    }, observerOptions);
+
+    sections.forEach(section => observer.observe(section));
+}
+
 
 // Utility function for smooth scrolling to sections
 function scrollToSection(sectionId) {
@@ -322,13 +350,52 @@ function openInteractivePreview() {
     alert('Preview de experiencia interactiva - Aquí se abriría una demo de la plataforma web inmersiva del ID.4.');
 }
 
-// Particle Animation System
+// === NUEVA FUNCIÓN DE AURA CON ESTELA ===
+function initializeMouseAura() {
+    const heroSection = document.getElementById('hero-section');
+    if (!heroSection) return;
+
+    let canCreateDot = true;
+
+    heroSection.addEventListener('mousemove', (e) => {
+        if (!canCreateDot) return; // Si no podemos crear, salimos
+
+        // Creamos un punto de la estela
+        const dot = document.createElement('div');
+        dot.className = 'aura-dot';
+        document.body.appendChild(dot); // Lo añadimos al body
+
+        // Lo posicionamos en el cursor
+        dot.style.left = `${e.clientX}px`;
+        dot.style.top = `${e.clientY}px`;
+
+        // Asignamos un color aleatorio de la paleta
+        const color = Math.random() > 0.5 ? 'var(--cyber-primary)' : 'var(--cyber-secondary)';
+        dot.style.backgroundColor = color;
+        dot.style.boxShadow = `0 0 15px ${color}, 0 0 25px ${color}`;
+
+        // Eliminamos el punto después de que termine su animación
+        setTimeout(() => {
+            dot.remove();
+        }, 700); // 700ms, que es la duración de la animación 'fadeAndShrink'
+
+        // Limitamos la creación de puntos para no saturar (throttling)
+        canCreateDot = false;
+        setTimeout(() => {
+            canCreateDot = true;
+        }, 50); // Creamos un punto como máximo cada 50ms
+    });
+}
+
+
+// === CÓDIGO FINAL PARA EL SISTEMA DE PARTÍCULAS "GALAXIA DENSA" ===
+
 function createParticles() {
     const particlesContainer = document.querySelector('.particles-container');
     if (!particlesContainer) return;
 
-    // Create floating particles
-    for (let i = 0; i < 20; i++) {
+    // Aumentamos drásticamente el número de partículas
+    for (let i = 0; i < 100; i++) {
         createParticle(particlesContainer);
     }
 }
@@ -336,37 +403,35 @@ function createParticles() {
 function createParticle(container) {
     const particle = document.createElement('div');
     particle.className = 'particle';
-    
-    // Random properties
-    const size = Math.random() * 4 + 2;
-    const x = Math.random() * 100;
-    const y = Math.random() * 100;
-    const duration = Math.random() * 10 + 10;
-    const delay = Math.random() * 5;
-    
-    particle.style.cssText = `
-        position: absolute;
-        width: ${size}px;
-        height: ${size}px;
-        background: var(--cyber-primary);
-        border-radius: 50%;
-        left: ${x}%;
-        top: ${y}%;
-        opacity: 0.6;
-        animation: float ${duration}s ease-in-out infinite;
-        animation-delay: ${delay}s;
-        pointer-events: none;
-    `;
-    
+
+    // Hacemos las partículas más grandes y variadas
+    const size = Math.random() * 3 + 1.5; // Ahora entre 1.5px y 4.5px
+    particle.style.width = `${size}px`;
+    particle.style.height = `${size}px`;
+    particle.style.left = `${Math.random() * 100}%`;
+    particle.style.top = `${Math.random() * 100}%`;
+
+    // Asignamos valores aleatorios a las variables CSS
+    const xEnd = (Math.random() * 150) - 75;
+    const yEnd = (Math.random() * 150) - 75;
+    const duration = Math.random() * 15 + 10; // Duraciones más cortas para más dinamismo
+
+    // Reducimos drásticamente el retraso para que aparezcan casi al instante
+    const delay = Math.random() * 2; // Máximo 2 segundos de retraso
+
+    particle.style.setProperty('--x-end', `${xEnd}px`);
+    particle.style.setProperty('--y-end', `${yEnd}px`);
+    particle.style.setProperty('--duration', `${duration}s`);
+    particle.style.setProperty('--delay', `-${delay}s`);
+
+    // Asignar color
+    if (Math.random() > 0.7) {
+        particle.style.setProperty('--particle-color', 'var(--cyber-secondary)');
+    } else {
+        particle.style.setProperty('--particle-color', 'var(--cyber-primary)');
+    }
+
     container.appendChild(particle);
-    
-    // Remove and recreate particle after animation cycle
-    setTimeout(() => {
-        if (particle.parentNode) {
-            particle.parentNode.removeChild(particle);
-            createParticle(container);
-        }
-    }, (duration + delay) * 1000);
 }
 
 // Keyboard Navigation
@@ -551,4 +616,80 @@ if (typeof module !== 'undefined' && module.exports) {
         openLightbox,
         closeLightbox
     };
+}
+// === FUNCIÓN FINAL Y DEFINITIVA PARA LA SECUENCIA DE INTRODUCCIÓN ===
+function initializeIntroSequence() {
+    return new Promise(resolve => {
+        const preloader = document.getElementById('preloader');
+        const introContainer = document.getElementById('intro-sequence');
+        const mainContent = document.getElementById('main-content');
+
+        if (!preloader || !introContainer || !mainContent) {
+            if(preloader) preloader.style.display = 'none';
+            if(mainContent) mainContent.style.opacity = '1';
+            resolve();
+            return;
+        }
+
+        document.body.style.overflow = 'hidden';
+
+        // --- CREACIÓN DE ELEMENTOS TEMPORALES PARA LA INTRO ---
+        const introLogo = document.createElement('img');
+        introLogo.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Volkswagen_logo_2019.svg/1024px-Volkswagen_logo_2019.svg.png";
+        introLogo.className = "intro-element w-20 h-20 filter brightness-0 invert mx-auto";
+
+        const introTitle1 = document.createElement('h1');
+        introTitle1.innerHTML = `<span class="text-cyber-text">LA NUEVA</span>`;
+        introTitle1.className = "intro-element font-montserrat font-black text-4xl md:text-7xl lg:text-8xl";
+
+        const introTitle2 = document.createElement('h1');
+        introTitle2.innerHTML = `<span class="electric-text-intro">ERA ELÉCTRICA</span>`;
+        introTitle2.className = "intro-element font-montserrat font-black text-4xl md:text-7xl lg:text-8xl";
+
+        let currentElement = null;
+
+        // --- COREOGRAFÍA DE LA ANIMACIÓN ---
+        setTimeout(() => {
+            currentElement = introLogo;
+            introContainer.appendChild(currentElement);
+            requestAnimationFrame(() => currentElement.classList.add('visible'));
+        }, 500); // 1. APARECE EL LOGO
+
+        setTimeout(() => {
+            currentElement.classList.remove('visible');
+            currentElement.addEventListener('transitionend', () => {
+                currentElement.remove();
+                currentElement = introTitle1;
+                introContainer.appendChild(currentElement);
+                requestAnimationFrame(() => currentElement.classList.add('visible'));
+            }, { once: true });
+        }, 2000); // 2. SE VA LOGO, APARECE "LA NUEVA"
+
+        setTimeout(() => {
+            currentElement.classList.remove('visible');
+            currentElement.addEventListener('transitionend', () => {
+                currentElement.remove();
+                currentElement = introTitle2;
+                introContainer.appendChild(currentElement);
+                requestAnimationFrame(() => {
+                    currentElement.classList.add('visible');
+                    currentElement.querySelector('span').classList.add('animate-ray');
+                });
+            }, { once: true });
+        }, 3500); // 3. SE VA "LA NUEVA", APARECE "ERA ELÉCTRICA" CON RAYO
+
+        setTimeout(() => {
+            preloader.style.transition = 'opacity 1s ease-out';
+            preloader.style.opacity = '0';
+
+            mainContent.style.transition = 'opacity 1s ease-in 0.5s';
+            mainContent.style.opacity = '1';
+
+            document.body.style.overflow = 'auto';
+            setTimeout(() => {
+                preloader.remove();
+                resolve();
+            }, 1500);
+        }, 5500); // 4. FUNDIDO FINAL
+    });
 }

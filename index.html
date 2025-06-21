@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Campaña VW ID.4 – "La Nueva Era Eléctrica"</title>
     <meta name="description" content="Campaña publicitaria conceptual para Volkswagen ID.4 creada con IA Generativa. Descubre la nueva era eléctrica con estética cyber-organic.">
-    
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,36 +16,18 @@
     <script src="https://unpkg.com/feather-icons"></script>
     
     <!-- Custom Styles -->
+<link rel="stylesheet" href="dist/output.css">
     <link rel="stylesheet" href="styles.css">
-    
-    <!-- Tailwind Configuration -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'cyber-dark': '#111827',
-                        'cyber-primary': '#6366F1',
-                        'cyber-secondary': '#818CF8',
-                        'cyber-accent': '#FFFFFF',
-                        'cyber-text': '#F9FAFB',
-                        'cyber-text-secondary': '#D1D5DB'
-                    },
-                    fontFamily: {
-                        'montserrat': ['Montserrat', 'sans-serif']
-                    },
-                    animation: {
-                        'float': 'float 6s ease-in-out infinite',
-                        'glow': 'glow 2s ease-in-out infinite alternate',
-                        'slide-in': 'slideIn 0.8s ease-out',
-                        'fade-in': 'fadeIn 1s ease-out'
-                    }
-                }
-            }
-        }
-    </script>
+
 </head>
 <body class="bg-cyber-dark text-cyber-text font-montserrat overflow-x-hidden">
+
+    <!-- === NUEVO: PRELOADER DE INTRODUCCIÓN (SOLO TELÓN DE FONDO) === -->
+<div id="preloader" class="fixed inset-0 bg-black z-[100] transition-opacity duration-1000 ease-out"></div>
+<!-- ========================================================== -->
+
+    </div>
+    <main id="main-content" class="opacity-0"></main>
     
     <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50 bg-cyber-dark/80 backdrop-blur-md border-b border-cyber-primary/20">
@@ -84,7 +64,7 @@
     </div>
 
     <!-- Hero Section -->
-    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="hero-section" section class="relative min-h-screen flex items-center justify-center overflow-hidden">
         <!-- Enhanced Background -->
         <div class="absolute inset-0 z-0">
             <div class="particles-container"></div>
@@ -96,20 +76,21 @@
         
         <div class="relative z-10 text-center px-6">
             <!-- VW Logo Animation -->
-            <div class="mb-8 animate-fade-in">
+            <div class="mb-8">
                 <div class="vw-logo-container relative mx-auto mb-6 w-32 h-32 flex items-center justify-center">
                     <div class="absolute inset-0 rounded-full bg-gradient-to-r from-cyber-primary/20 via-cyber-secondary/20 to-cyber-primary/20 animate-pulse"></div>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Volkswagen_logo_2019.svg/1024px-Volkswagen_logo_2019.svg.png" 
+                    <img id="hero-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Volkswagen_logo_2019.svg/1024px-Volkswagen_logo_2019.svg.png" 
                          alt="Volkswagen Logo" 
                          class="relative z-10 w-20 h-20 filter brightness-0 invert">
                 </div>
             </div>
             
             <!-- Main Headline -->
-            <h1 class="font-montserrat font-black text-4xl md:text-7xl lg:text-8xl mb-6 animate-slide-in text-center tracking-tight">
-                <span class="text-cyber-text">LA NUEVA</span><br>
-                <span class="text-cyber-text">ERA ELÉCTRICA</span>
-            </h1>
+
+    <h1 class="font-montserrat font-black text-4xl md:text-7xl lg:text-8xl mb-6 animate-slide-in text-center tracking-tight">
+    <span class="text-cyber-text">LA NUEVA</span><br>
+    <span class="electric-text text-cyber-accent relative">ERA ELÉCTRICA</span>
+</h1>
             
             <!-- Tagline -->
             <p class="font-montserrat font-medium text-xl md:text-2xl text-cyber-text-secondary mb-8 animate-fade-in text-center tracking-wide" style="animation-delay: 0.5s;">
@@ -128,13 +109,14 @@
         </div>
         
         <!-- Scroll Indicator -->
-        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <i data-feather="chevron-down" class="text-cyber-text w-8 h-8"></i>
-        </div>
+        <div class="absolute bottom-8 inset-x-0 flex justify-center animate-bounce">
+    <i data-feather="chevron-down" class="text-cyber-text w-8 h-8"></i>
+</div>
     </section>
+    
 
     <!-- Concept Section -->
-    <section id="concept" class="py-20 relative">
+    <section id="concept" class="py-20 relative" data-bg-color="#111827">
         <div class="container mx-auto px-6">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <div class="order-2 lg:order-1">
@@ -170,9 +152,12 @@
             </div>
         </div>
     </section>
+<div class="fade-in-on-scroll">
+  <div class="section-divider"></div>
+</div>
 
     <!-- Project Section -->
-    <section id="project" class="py-20 bg-gradient-to-b from-transparent to-cyber-primary/5">
+<section id="project" class="py-20 bg-gradient-to-b from-transparent to-cyber-primary/5" data-bg-color="#10142a">
         <div class="container mx-auto px-6">
             <h2 class="section-title font-montserrat font-black text-4xl md:text-5xl text-center mb-16 text-cyber-text fade-in-on-scroll uppercase">
                 EL PROYECTO
@@ -180,7 +165,7 @@
             
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Naming & Creative Strategy -->
-                <div class="project-card group fade-in-on-scroll h-full flex flex-col">
+                <div class="glass-card fade-in-on-scroll h-full flex flex-col">
                     <div class="icon-container mx-auto">
                         <i data-feather="edit-3" class="w-12 h-12 text-cyber-text"></i>
                     </div>
@@ -202,8 +187,8 @@
                 </div>
                 
                 <!-- Visual Storytelling -->
-                <div class="project-card group fade-in-on-scroll h-full flex flex-col" style="animation-delay: 0.2s;">
-                    <div class="icon-container mx-auto">
+                <div class="glass-card fade-in-on-scroll h-full flex flex-col" style="animation-delay: 0.2s;">
+                <div class="icon-container mx-auto">
                         <i data-feather="image" class="w-12 h-12 text-cyber-text"></i>
                     </div>
                     <h3 class="font-montserrat font-bold text-xl mb-4 text-cyber-text text-center uppercase">
@@ -224,7 +209,7 @@
                 </div>
                 
                 <!-- Interactive Web Experience -->
-                <div class="project-card group fade-in-on-scroll h-full flex flex-col" style="animation-delay: 0.4s;">
+                <div class="glass-card fade-in-on-scroll h-full flex flex-col" style="animation-delay: 0.4s;">
                     <div class="icon-container mx-auto">
                         <i data-feather="monitor" class="w-12 h-12 text-cyber-text"></i>
                     </div>
@@ -247,9 +232,9 @@
             </div>
         </div>
     </section>
-
+    
     <!-- Brand Strategy Section -->
-    <section id="brand-strategy" class="py-20 bg-gradient-to-b from-cyber-primary/5 to-transparent">
+     <section id="brand-strategy" class="py-20 bg-gradient-to-b from-cyber-primary/5 to-transparent" data-bg-color="#111827">
         <div class="container mx-auto px-6">
             <h2 class="section-title font-montserrat font-black text-4xl md:text-5xl text-center mb-16 text-cyber-text fade-in-on-scroll uppercase">
                 NAMING & ESTRATEGIA CREATIVA
@@ -361,8 +346,12 @@
         </div>
     </section>
 
+    <div class="fade-in-on-scroll">
+  <div class="section-divider"></div>
+</div>
+
     <!-- Key Visuals Section -->
-    <section id="visuals" class="py-20">
+    <section id="visuals" class="py-20" data-bg-color="#15122b">
         <div class="container mx-auto px-6">
             <h2 class="section-title font-montserrat font-black text-4xl md:text-5xl text-center mb-4 text-cyber-text fade-in-on-scroll uppercase">
                 KEY VISUALS
@@ -454,10 +443,14 @@
         </div>
     </section>
 
+    <div class="fade-in-on-scroll">
+  <div class="section-divider"></div>
+</div>
+
     <!-- Advertising Spot Section -->
-    <section id="spot" class="py-20 bg-gradient-to-b from-cyber-primary/5 to-transparent">
+   < <section id="spot" class="py-20" data-bg-color="#111827">
         <div class="container mx-auto px-6">
-            <h2 class="font-orbitron font-bold text-4xl md:text-5xl text-center mb-16 text-cyber-primary fade-in-on-scroll">
+            <h2 class="section-title font-montserrat font-black text-4xl md:text-5xl mb-16 text-cyber-text fade-in-on-scroll uppercase">
                 Spot Publicitario
             </h2>
             
@@ -516,10 +509,14 @@
         </div>
     </section>
 
+    <div class="fade-in-on-scroll">
+  <div class="section-divider"></div>
+</div>
+
     <!-- Transmedia Activations Section -->
-    <section id="transmedia" class="py-20">
+ <section id="transmedia" class="py-20" data-bg-color="#1a1a3d">
         <div class="container mx-auto px-6">
-            <h2 class="font-orbitron font-bold text-4xl md:text-5xl text-center mb-16 text-cyber-primary fade-in-on-scroll">
+            <h2 class="section-title font-montserrat font-black text-4xl md:text-5xl text-center mb-16 text-cyber-text fade-in-on-scroll uppercase">
                 Activaciones Transmedia
             </h2>
             
@@ -683,10 +680,14 @@
         </div>
     </section>
 
+    <div class="fade-in-on-scroll">
+  <div class="section-divider"></div>
+</div>
+
     <!-- Interactive Web Experience Section -->
-    <section id="interactive" class="py-20 bg-gradient-to-b from-transparent to-cyber-secondary/5">
+   <section id="interactive" class="py-20 bg-cyber-dark" data-bg-color="#111827">
         <div class="container mx-auto px-6">
-            <h2 class="font-orbitron font-bold text-4xl md:text-5xl text-center mb-16 text-cyber-primary fade-in-on-scroll">
+            <h2 class="section-title font-montserrat font-black text-4xl md:text-5xl text-center mb-16 text-cyber-text fade-in-on-scroll uppercase">
                 Web Interactiva ID.4
             </h2>
             
@@ -748,8 +749,11 @@
         </div>
     </section>
 
+    <div class="fade-in-on-scroll">
+  <div class="section-divider"></div>
+</div>
     <!-- AI Team Section -->
-    <section id="ai-team" class="py-20">
+   <section id="ai-team" class="py-20" data-bg-color="#0c0a14">
         <div class="container mx-auto px-6">
             <h2 class="section-title font-montserrat font-black text-4xl md:text-5xl text-center mb-16 text-cyber-text fade-in-on-scroll uppercase">
                 EL EQUIPO IA
@@ -890,55 +894,9 @@
 
     <!-- JavaScript -->
     <script src="script.js"></script>
+    </main>
 </body>
 </html>
-
-    <!-- Footer -->
-    <footer class="bg-cyber-dark border-t border-cyber-primary/20 py-12">
-        <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-3 gap-8 mb-8">
-                <div>
-                    <h3 class="font-orbitron font-bold text-xl text-cyber-primary mb-4">VW ID.4</h3>
-                    <p class="text-cyber-text-secondary">
-                        Campaña conceptual desarrollada con IA Generativa para demostrar 
-                        el futuro de la creatividad publicitaria.
-                    </p>
-                </div>
-                
-                <div>
-                    <h4 class="font-orbitron font-semibold text-cyber-accent mb-4">Tecnologías IA</h4>
-                    <ul class="space-y-2 text-cyber-text-secondary">
-                        <li>ChatGPT - Estrategia</li>
-                        <li>Gemini - Análisis</li>
-                        <li>VEO 2 - Video</li>
-                        <li>Midjourney - Visuales</li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="font-orbitron font-semibold text-cyber-accent mb-4">Conecta</h4>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-cyber-text-secondary hover:text-cyber-primary transition-colors duration-300">
-                            <i data-feather="linkedin" class="w-6 h-6"></i>
-                        </a>
-                        <a href="#" class="text-cyber-text-secondary hover:text-cyber-primary transition-colors duration-300">
-                            <i data-feather="twitter" class="w-6 h-6"></i>
-                        </a>
-                        <a href="#" class="text-cyber-text-secondary hover:text-cyber-primary transition-colors duration-300">
-                            <i data-feather="instagram" class="w-6 h-6"></i>
-                        </a>
-                        <a href="#" class="text-cyber-text-secondary hover:text-cyber-primary transition-colors duration-300">
-                            <i data-feather="youtube" class="w-6 h-6"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="border-t border-cyber-primary/20 pt-8 text-center text-cyber-text-secondary">
-                <p>&copy; 2024 VW ID.4 - La Nueva Era Eléctrica. Campaña conceptual creada con IA Generativa.</p>
-            </div>
-        </div>
-    </footer>
 
     <!-- Lightbox Modal -->
     <div id="lightbox" class="fixed inset-0 z-50 bg-cyber-dark/95 backdrop-blur-lg hidden flex items-center justify-center p-4">
